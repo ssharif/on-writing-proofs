@@ -1,0 +1,114 @@
+\newenvironment{modenumerate}
+  {\enumerate\setupmodenumerate}
+  {\endenumerate}
+
+\newif\ifmoditem
+\newcommand{\setupmodenumerate}{%
+  \global\moditemfalse
+  \let\origmakelabel\makelabel
+  \def\moditem##1{\global\moditemtrue\def\mesymbol{##1}\item}%
+  \def\makelabel##1{%
+    \origmakelabel{##1\ifmoditem\rlap{\mesymbol}\fi\enspace}%
+    \global\moditemfalse}%
+} % starred items; use \modenumerate and \moditem{*}
+
+% Variable text
+\newcommand{\knight}{mathematician\xspace }
+\newcommand{\knights}{mathematicians\xspace }
+\newcommand{\Knight}{Mathematician\xspace }
+\newcommand{\Knights}{Mathematicians\xspace }
+\newcommand{\knave}{dalek\xspace }
+\newcommand{\knaves}{daleks\xspace }
+\newcommand{\Knave}{Dalek\xspace }
+\newcommand{\Knaves}{Daleks\xspace }
+
+% General math
+\theoremstyle{plain}
+\newtheorem*{reftheorem}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}{Problem}
+\newtheorem{question}{Question}
+\newtheorem*{question*}{Question}
+\newtheorem*{claim}{Claim}
+
+\theoremstyle{definition} 
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark} 
+\newtheorem{example}[theorem]{Example}
+
+
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\hra}{\hookrightarrow}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\isom}{\cong}
+\newcommand{\too}{\longrightarrow}
+\newcommand{\isomto}{\overset{\sim}{\longrightarrow}}
+\newcommand{\nsubset}{\not\subset}
+\renewcommand{\phi}{\varphi}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\ilim}{\displaystyle\lim_{\leftarrow}}
+\newcommand{\dirlim}{\displaystyle\lim_{\rightarrow}}
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+%\renewcommand{\char}{\car}
+\DeclareMathOperator{\car}{char}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Hom}{Hom} 
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\im}{im} 
+\DeclareMathOperator{\pgl}{PGL} 
+\DeclareMathOperator{\Gl}{GL} 
+\DeclareMathOperator{\Sl}{SL} 
+
+% Set theory
+\newcommand{\sP}{\mathscr{P}}
+
+% Number theory
+\newcommand{\Qbar}{\ensuremath{\overline{\Q}}}
+\newcommand{\zbar}{\ensuremath{\overline{z}}} 
+\newcommand{\Kb}{\overline{K}}
+\newcommand{\Fb}{\overline{F}}
+\newcommand{\kb}{\overline{k}}
+\newcommand{\Xbar}{\overline{X}}
+\newcommand{\Cbar}{\overline{C}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\renewcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\newcommand{\fp}{\ensuremath{\mathbb{F}_p}}
+\newcommand{\sm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\eff}{\ensuremath{\mathfrak{f}}}
+\newcommand{\sn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\sq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\sQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+
+
+\DeclareMathOperator{\ord}{ord} 
+\DeclareMathOperator{\Gal}{Gal} 
+\DeclareMathOperator{\inv}{inv} 
+\DeclareMathOperator{\Nm}{Nm} 
+\DeclareMathOperator{\tr}{Tr} 
+\DeclareMathOperator{\lcm}{lcm} 
+
+% Combinatorics
+\newcommand{\un}{\underline{n}}
+\newcommand{\dinom}[2]{\binom{#1}{#2}}
+\newcommand{\sh}{\mathscr{H}}
+\newcommand{\Sa}{\mathscr{A}}
+\newcommand{\Sb}{\mathscr{B}}
+\newcommand{\Sc}{\mathscr{C}}

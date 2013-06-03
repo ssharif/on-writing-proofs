@@ -1,0 +1,222 @@
+\documentclass{tufte-book}
+%\documentclass[letterpaper]{scrbook}
+\hypersetup{colorlinks}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+%\usepackage{mathrsfs}
+\usepackage[all]{xy}
+\usepackage{booktabs}
+\usepackage{xspace}
+\usepackage{dialogue}
+%\usepackage[pagebackref,colorlinks]{hyperref}
+
+\usepackage{proofspreamble}
+
+\setcounter{secnumdepth}{3}
+\titleformat{\chapter}
+  [block]% shape
+  {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
+  {\itshape\huge\thechapter}% label
+  {1em}% horizontal separation between label and title body
+  {\huge\rmfamily\itshape}% before the title body
+  [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
+
+\title{On Writing Proofs}
+\author{Shahed Sharif}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Propositional Logic}
+
+\section{\Knights and \knaves}
+\label{sec:knights-knaves}
+
+A certain island in the middle of the Pacific Ocean is inhabited by two types of people, known as \knights and \knaves. It is known that \knights always make true statements, while \knaves always lie. One day, you visit the island and encounter three of the inhabitants: Azog, Bartholomew, and Cynthia. You ask Azog whether he is a \knight or a \knave. The following conversation ensues:
+
+\begin{example}\label{ex:knight-knave-1}
+  \begin{dialogue}
+    \speak{Azog} [mumbles inaudibly]\sidenote{Both \knights and \knaves are known to mumble occasionally!}
+    \speak{You} What did you say?
+    \speak{Bartholomew} He said that he's a \knave. 
+    \speak{Cynthia} Bartholomew lies!
+  \end{dialogue}
+\end{example}
+
+The question is, who is a \knight and who is a \knave? Take a moment to solve this problem.
+
+The next few sections contain problems of this sort; that is, a number of inhabitants make a number of statements, and based on these statements, you must deduce something, usually who is a \knight and who is a \knave. There is always a straightforward way of approaching these problems: try every possibility! In the above example, Azog can be a \knight or a \knave, Bartholomew can be a \knight or a \knave, and Cynthia can be a \knight or a \knave, giving $2 \cdot 2 \cdot 2 = 8$ possibilities total.\sidenote{A common error is to think that there are 6 possibilities total. If you thought so, then you should list them all out.} Most of these possibilities will make no sense, as you'd end up having a \knight making a false statement or a \knave making a true statement. As a simple example, consider the puzzle
+
+\begin{dialogue}
+  \speak{Avery} Two plus two is five.
+  \speak{Belvedere} The sky is blue.
+\end{dialogue}
+
+Since there are two people in the problem, there are $2 \cdot 2 = 4$ potential solutions: \marginnote{Trying out every single option is known as the \emph{brute force} approach, and as you can see from this last example, one should only use it as a last resort. Instead, make key observations to shorten your work.}  Avery is a \knight and Belvedere is a \knight, Avery is a \knight and Belvedere is a \knave, Avery is a \knave and Belvedere is a \knight, or Avery is a \knave and Belvedere is a \knave. But clearly testing all 4 possibilities is a very slow way of solving the problem! 
+
+Now let's do Example~\ref{ex:knight-knave-1}.
+\begin{claim}
+  Bartholomew is a \knave and Cynthia is a \knight. Azog's type cannot be determined.
+\end{claim}
+
+\begin{proof}
+  If Azog were a \knight, then he could not say that he is a \knave, for then he'd be lying. If Azog were a \knave, then again he could not say that he is a \knave, for then he'd be telling the truth. Either way, Azog cannot have said that he is a \knave. Therefore Bartholomew's statement is false, \marginnote{Note that Bartholomew isn't saying that Azog is a \knave, but rather that \emph{Azog says} that Azog is a \knave.} hence Bartholomew is a \knave, and Cynthia's statement is true, hence she is a \knight. As for Azog, from the information given, there is now way of determining what he is.
+\end{proof}
+
+
+Notice how we wrote this out: first, the answer under the label ``Claim'', then the explanation with the label ``Proof''. Proofs are the main subject of this book. You'll notice immediately that the proof is written in complete sentences put together into a paragraph; that is, a proof is a written form, like an essay, and should conform to the usual standards for a properly written essay, including correct spelling and grammar.\marginnote{There are many ingredients to a correctly written mathematical proof. We will discuss these ingredients in detail in the remainder of this book.} Additionally, the proof is written as a formal, logical argument, where each statement is carefully explained. In the problems below, you should write out your answers in the same format as I've done above.
+
+
+\section{Conjunctions}
+\label{sec:conjunctions}
+
+Suppose Arjun makes the following statement:
+\begin{example}
+  \begin{dialogue}
+    \speak{Arjun} I am a \knave and Bathsheba is a \knight.
+  \end{dialogue}
+\end{example}
+
+What are Arjun and Bathsheba? This statement is an example of the conjunction AND. In order for the statement to be true, both parts must be true; to be false, \emph{at least one part} must be false. That means the first part is false, or the second part is false, or both are false. Consider the following examples:
+\begin{enumerate}
+    \item The sky is blue and $2 + 2 = 4$.
+    \item The sky is green and $2 + 2 = 4$.
+    \item The sky is blue and $2 + 2 = 5$.
+    \item The sky is green and $2 + 2 = 5$.
+\end{enumerate}
+Of these, the first is true, and the rest are false.
+
+Now we solve the problem.
+\begin{claim}
+  Arjun and Bathsheba are both \knaves.
+\end{claim}
+
+\begin{proof}
+  Suppose Arjun is a \knight. Then both parts of his statement are true. But the first part of his statement is that he is a \knave, which is the opposite of what we assumed. So Arjun must be a \knave. Then his statement must be false. The first part of his statement, that he is a \knave, is true, so the second part must be false. Therefore Bathsheba is also a \knave.
+\end{proof}
+
+Notice that making two separate statements is not the same as putting an AND between them; that is, if the puzzle were instead
+\begin{example}
+  \begin{dialogue}
+    \speak{Arjun} I am a \knave. Bathsheba is a \knight.
+  \end{dialogue}
+\end{example}
+then you'd have to say, ``That's impossible!'' Why? Because Arjun could never make the statement ``I am a \knave.''
+
+Try this puzzle:
+\begin{example}
+  \begin{dialogue}
+    \speak{Annalee} Either I am \knave or Bijou is a \knight.
+  \end{dialogue}
+\end{example}
+What are Annalee and Bijou? Here we have a different type of conjunction: OR. The or in mathematics functions slightly differently than in conversational English in that it is true if one \emph{or both} of the parts are true.\marginnote{If we want exactly one thing to be true, we'd say so explicitly: ``I am tall or I am shy, but not both.'' This is sometimes called \emph{exclusive or}. Regular or is \emph{inclusive}.} Consider the following statements:
+\begin{enumerate}
+    \item The sky is blue or $2 + 2 = 4$.
+    \item The sky is green or $2 + 2 = 4$.
+    \item The sky is blue or $2 + 2 = 5$.
+    \item The sky is green or $2 + 2 = 5$.
+\end{enumerate}
+The first three are true, while the last one is false. 
+
+\begin{claim}
+  Both Annalee and Bijou are \knights.
+\end{claim}
+
+\begin{proof}
+  If Annalee is a \knave, then the first part of her statement is true, which is impossible. Therefore Annalee is a \knight. Since now the first part of her statement is false, the second part must be true. Therefore Bijou is a \knight as well.
+\end{proof}
+
+\section{Conditionals}
+\label{sec:conditionals}
+
+A conditional is an \emph{if-then} statement, such as
+\begin{itemize}
+    \item If it is raining, then the grass is wet.
+    \item If the shape is a square, then it is a rectangle.
+    \item If I sleep poorly, then I am tired in the morning.
+    \item If $n$ is an even prime, then $n = 2$.
+\end{itemize}
+Grammatically, conditionals can be phrased in multiple ways:
+\begin{itemize}
+    \item The grass is wet whenever it rains.
+    \item Every square is a rectangle.
+    \item I feel tired every time I sleep poorly.
+    \item The only even prime is 2.
+\end{itemize}
+
+We consider the following situation:
+\begin{example}
+  \begin{dialogue}
+    \speak{Ashika} If I am a \knight, then Burt is a \knave.
+  \end{dialogue}
+\end{example}
+What are Ashika and Burt?
+
+Dealing with conditionals is considerable trickier than dealing with conjunctions. The general conditional is in the form ``If P then Q,'' where the P and Q stand for statements. In the above example, P is ``Ashika is a \knight'' and Q is ``Burt is a \knave.'' The question is, what does it mean if the conditional is true? And what does it mean if the conditional is false? We demonstrate with a couple easier examples.
+
+\begin{example}
+  You are a bouncer at a bar. It is your job to make sure no one underaged is drinking. You see four people at the bar:
+  \begin{itemize}
+      \item an elderly man drinking water,
+      \item an elderly woman drinking scotch,
+      \item a young man drinking beer, and
+      \item a young woman drinking soda.
+  \end{itemize}
+  Whose identification do you check?\sidenote{You could of course just check everyone's ID, but generally you want to check the fewest number of people as possible.}
+\end{example}
+This should be easy: just the third person. Here, you are checking that the rule
+\begin{quote}
+  If you are under 21, then you can only drink nonalcoholic beverages.
+\end{quote}
+is satisfied. There is only \emph{one} situation which breaks this rule: someone under 21 who is drinking an alcoholic beverage. 
+
+Going back to the general case, this implies that the statement ``If P then Q'' is false when both P is true and Q is false, but is otherwise a true statement!
+
+To illustrate this last observation, we consider the following statements:\marginnote{One thing to observe about these examples is that in terms of logic, there's no need for there to be a \emph{causal relationship} between the two parts of a conditional. That is, even though there's absolutely no reason in the world that the incorrect arithmetic statement $2 + 2 = 5$ should affect the color of the sky, the statement ``If $2 + 2 = 5$, then the sky is blue'' is still considered true.}
+\begin{enumerate}
+    \item If $2 + 2 = 4$, then the sky is blue.
+    \item If $2 + 2 = 5$, then the sky is blue.
+    \item If $2 + 2 = 5$, then the sky is green.
+    \item If $2 + 2 = 4$, then the sky is green.
+\end{enumerate}
+Of these, the first three are true, and the last is false.
+\begin{example}
+  Given the statement, ``If it is raining, then the grass is wet'', what would have to be happening right now for the statement to be false? List all possibilities which make the statement false.
+\end{example}
+
+\begin{example}
+  Your friend has 4 cards, each of which has a letter on one side and a number on the other. Your friend then makes the statement, ``If the letter is a vowel, then the number on the other side is even.'' You want to check to see whether the statement is true or false. Suppose the 4 cards are lying on a table, and the sides visible to you read
+  \[
+  \framebox{A} \qquad \framebox{N} \qquad \framebox{4} \qquad \framebox{7}.
+  \]
+  Which cards do you turn over? \marginnote{Similar to the bouncer problem, you want to turn over the minimum number of cards.}
+\end{example}
+
+\begin{claim}
+  You would turn over the cards labeled A and 7.
+\end{claim}
+
+\begin{proof}
+  As stated earlier, ``If P then Q'' is true \emph{unless} P is true and Q is false. In this case, P is ``the letter is a vowel'' and Q is ``the number on the other side is even''. For the card labeled N, P is false, so the conditional is automatically satisfied\sidenote{We say a statement or condition is \emph{satisfied} if it is true in that particular case. The statement is true if it is satisfied in all cases.}, and we don't need to turn the card over. For the card labeled 4, Q is true, so again the conditional is also automatically satisfied; we need not turn this card over.
+
+  For the card labeled A, if the opposite side has an odd number, then the conditional is false; if the opposite side has an even number, then the conditional is true. Thus we need to check the A. The last case is 7. If the opposite side is a consonant, then there is no problem---the conditional is satisfied.\marginnote{If this seems strange, consider the case where opposite the 7 is an E, and opposite the 4 is a C. What does each card tell you about the truth of the conditional?} But if the opposite side is a vowel, then the conditional is false.
+\end{proof}
+
+Now we are ready to do the \knights and \knaves puzzle at the start of this section! We restate it here to refresh your memory:
+  \begin{dialogue}
+    \speak{Ashika} If I am a \knight, then Burt is a \knave.
+  \end{dialogue}
+
+  \begin{claim}
+    Ashika is a \knight and Burt is a \knave.
+  \end{claim}
+
+  \begin{proof}
+    Ashika's statement is in the form ``If P then Q'', where P is ``Ashika is a \knight'' and Q is ``Burt is a \knave''. If Ashika is a \knave, then P is false. But this makes the conditional true! As \knaves cannot make true statements, we must have that Ashika is a \knight. If Burt is a \knight, then P is true and Q if false, which would make the entire conditional false. Since Ashika's statement is true, this cannot be. Therefore Burt is a \knave.
+  \end{proof}
+
+\bibliographystyle{halpha}
+\end{document}
