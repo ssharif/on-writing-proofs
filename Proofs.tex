@@ -10,6 +10,7 @@
 \usepackage{booktabs}
 \usepackage{xspace}
 \usepackage{dialogue}
+\usepackage{exercise}
 %\usepackage[pagebackref,colorlinks]{hyperref}
 
 \usepackage{proofspreamble}
@@ -68,6 +69,30 @@ Now let's do Example~\ref{ex:knight-knave-1}.
 
 
 Notice how we wrote this out: first, the answer under the label ``Claim'', then the explanation with the label ``Proof''. Proofs are the main subject of this book. You'll notice immediately that the proof is written in complete sentences put together into a paragraph; that is, a proof is a written form, like an essay, and should conform to the usual standards for a properly written essay, including correct spelling and grammar.\marginnote{There are many ingredients to a correctly written mathematical proof. We will discuss these ingredients in detail in the remainder of this book.} Additionally, the proof is written as a formal, logical argument, where each statement is carefully explained. In the problems below, you should write out your answers in the same format as I've done above.
+
+\probsec{~\ref{sec:knights-knaves}}
+
+  In all of the following, named characters are \knights or \knaves.\marginnote{Remember that all answers should be explained in complete sentences! The goal is clarity.}
+\vspace{.1in}
+
+\begin{ExerciseList}
+  \problem Suppose Adonis says, ``I am a \knight.'' What can you conclude?
+  \problem Suppose you encounter Ariadne and Bilal.
+  \begin{dialogue}
+    \speak{Ariadne} Bilal would say that I would say that Bilal is a \knight.
+    \speak{Bilal} That's not true.
+  \end{dialogue}
+  What can you conclude? FIX
+  \problem You encounter Ayumi, Bethesda, and Coco.
+  \begin{dialogue}
+    \speak{Ayumi} Bethesda would say that Coco is a \knave.
+    \speak{Bethesda} Coco would say Ayumi is a \knave.
+    \speak{Coco} Ayumi is a \knight.
+  \end{dialogue} 
+  You additionally know that at least one of the three is a \knave. What can you conclude?
+
+  \problem 
+\end{ExerciseList}
 
 
 \section{Conjunctions}
@@ -128,6 +153,18 @@ The first three are true, while the last one is false.
 \begin{proof}
   If Annalee is a \knave, then the first part of her statement is true, which is impossible. Therefore Annalee is a \knight. Since now the first part of her statement is false, the second part must be true. Therefore Bijou is a \knight as well.
 \end{proof}
+
+\probsec{~\ref{sec:conjunctions}}
+\begin{ExerciseList}
+  \problem You encounter Arkana, Bullard, Corinthian, and Robin.
+  \begin{dialogue}
+    \speak{Arkana} Either Bullard is a \knight or Corinthian is a \knave.
+    \speak{Bullard} Either Arkana or Robin is a \knave.
+    \speak{Corinthian} At least one of the other three is a \knave.
+    \speak{Robin} The sky is green.
+  \end{dialogue}
+  You know that there is at least one \knight and at least one \knave amongst the three. What can you conclude?
+\end{ExerciseList}
 
 \section{Conditionals}
 \label{sec:conditionals}
@@ -224,7 +261,7 @@ Now we are ready to do the \knights and \knaves puzzle at the start of this sect
 So far we've taken to statements, P and Q, and combined them in three different ways: P or Q, P and Q, and if P then Q. To summarize our discussion, we can use \emph{truth tables}. 
 \begin{table}
   \centering
-  \begin{tabular}{cc|c}
+  \begin{tabular}{ccc}
     \toprule
     P & Q & P or Q \\ \midrule
     T & T & T \\
@@ -244,7 +281,7 @@ is true or not. We have P is ``the sky is green'' and Q is ``$2 + 2 = 5$''. Sinc
 
 \begin{table}
   \centering
-  \begin{tabular}{cc|c}
+  \begin{tabular}{ccc}
     \toprule
     P & Q & P and Q \\ \midrule
     T & T & T \\
@@ -260,7 +297,7 @@ One can similarly check the truth tables for AND and conditionals.
 
 \begin{table}
   \centering
-  \begin{tabular}{cc|c}
+  \begin{tabular}{ccc}
     \toprule
     P & Q & If P then Q \\ \midrule
     T & T & T \\
@@ -275,7 +312,7 @@ Truth table can be used for much more complicated situations. For example, say w
 
 \begin{table}
   \centering
-  \begin{tabular}{cc|cc|c}
+  \begin{tabular}{ccccc}
     \toprule
     P & Q & P or Q & R & If P or Q, then R \\ \midrule
     T & T & T & T & T\\

@@ -12,6 +12,13 @@
     \global\moditemfalse}%
 } % starred items; use \modenumerate and \moditem{*}
 
+\renewcommand{\ExerciseListName}{}
+\renewcommand{\ExerciseHeaderTitle}{}
+\newcounter{Problem}
+\newcommand{\problem}{\Exercise[name={Problem},counter={Problem}]}
+
+\newcommand{\probsec}[1]{\section*{Problems for Section#1}}
+
 % Variable text
 \newcommand{\knight}{mathematician\xspace }
 \newcommand{\knights}{mathematicians\xspace }
@@ -30,7 +37,7 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{problem}{Problem}
+%\newtheorem{problem}{Problem}
 \newtheorem{question}{Question}
 \newtheorem*{question*}{Question}
 \newtheorem*{claim}{Claim}
