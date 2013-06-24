@@ -91,7 +91,12 @@ Notice how we wrote this out: first, the answer under the label ``Claim'', then 
   \end{dialogue} 
   You additionally know that at least one of the three is a \knave. What can you conclude?
 
-  \problem 
+  \problem You encounter Ayumi, Bethesda, and Coco.
+  \begin{dialogue}
+    \speak{Ayumi} Bethesda would say that Coco is a \knave.
+    \speak{Bethesda} Coco would say Ayumi is a \knave.
+    \speak{Coco} Ayumi would say that Bethesda is a \knave.
+  \end{dialogue} 
 \end{ExerciseList}
 
 
@@ -164,6 +169,15 @@ The first three are true, while the last one is false.
     \speak{Robin} The sky is green.
   \end{dialogue}
   You know that there is at least one \knight and at least one \knave amongst the three. What can you conclude?
+
+  \problem You encounter Al, Bea, Che, and Dino. One of them is a \knave who stole a very valuable mathematical manuscript. Determine from their statements who is the thief.
+  \begin{dialogue}
+    \speak{Al} Dino is the thief.
+    \speak{Bea} At least one of us is a \knight.
+    \speak{Che} At least one of us is a \knave.
+    \speak{Dino} Both Bea and Che are \knights.
+  \end{dialogue}
+
 \end{ExerciseList}
 
 \section{Conditionals}
@@ -254,6 +268,8 @@ Now we are ready to do the \knights and \knaves puzzle at the start of this sect
   \begin{proof}
     Ashika's statement is in the form ``If P then Q'', where P is ``Ashika is a \knight'' and Q is ``Burt is a \knave''. If Ashika is a \knave, then P is false. But this makes the conditional true! As \knaves cannot make true statements, we must have that Ashika is a \knight. If Burt is a \knight, then P is true and Q if false, which would make the entire conditional false. Since Ashika's statement is true, this cannot be. Therefore Burt is a \knave.
   \end{proof}
+
+\probsec{~\ref{sec:conditionals}}
 
 \section{Truth tables}
 \label{sec:truth-tables}
