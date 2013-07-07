@@ -2,7 +2,7 @@
 %\documentclass[letterpaper]{scrbook}
 \hypersetup{colorlinks}
 \usepackage{amsmath, amsthm, amssymb}
-\usepackage{lmodern}
+\usepackage{mathpazo}
 \usepackage[T1]{fontenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
 %\usepackage{mathrsfs}
@@ -10,6 +10,8 @@
 \usepackage{booktabs}
 \usepackage{xspace}
 \usepackage{dialogue}
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
 \usepackage{exercise}
 %\usepackage[pagebackref,colorlinks]{hyperref}
 
@@ -114,7 +116,7 @@ Try this puzzle:
     \speak{Annalee} Either I am \knave or Bijou is a \knight.
   \end{dialogue}
 \end{example}
-What are Annalee and Bijou? Here we have a different type of conjunction: OR. The or in mathematics functions slightly differently than in conversational English in that it is true if one \emph{or both} of the parts are true.\marginnote{If we want exactly one thing to be true, we'd say so explicitly: ``I am tall or I am shy, but not both.'' This is sometimes called \emph{exclusive or}. Regular or is \emph{inclusive}.} Consider the following statements:
+What are Annalee and Bijou? Here we have a different type of conjunction: OR. The or in mathematics functions slightly differently than in conversational English in that it is true if one \emph{or both} of the parts are true.\marginnote{If we want one thing to be true but not both, we'd say so explicitly: ``I am tall or I am shy, but not both.'' This is sometimes called \emph{exclusive or}. Regular or is \emph{inclusive}.} Consider the following statements:
 \begin{enumerate}
     \item The sky is blue or $2 + 2 = 4$.
     \item The sky is green or $2 + 2 = 4$.
