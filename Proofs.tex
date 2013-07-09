@@ -226,10 +226,12 @@ Now we are ready to do the \knights and \knaves puzzle at the start of this sect
   \end{proof}
 
 
-\section{Truth tables}
+\section{Truth tables}\marginnote{Truth tables are used for clarity when explaining propositional logic, but never appear in properly-written mathematical proofs. This means that if you get confused about what a theorem or problems says, for example, then it's a good idea to write out a truth table for yourself.}
 \label{sec:truth-tables}
 
 So far we've taken to statements, P and Q, and combined them in three different ways: P or Q, P and Q, and if P then Q. To summarize our discussion, we can use \emph{truth tables}. 
+
+Table~\ref{tab:truth-table-or} lists the four possible combinations of truth values for P and Q: both are true (T T), P is true and Q is false (T F), P is false and Q is true (F T), or both are false (F F). In each case, one can look at the third column to determine if the statement ``P or Q'' is true or false.
 \begin{table}
   \centering
   \begin{tabular}{ccc}
@@ -244,11 +246,13 @@ So far we've taken to statements, P and Q, and combined them in three different 
   \label{tab:truth-table-or}
 \end{table}
 
-Table~\ref{tab:truth-table-or} lists the four possible combinations of truth values for P and Q: both are true (T T), P is true and Q is false (T F), P is false and Q is true (F T), or both are false (F F). In each case, one can look at the third column to determine if the statement ``P or Q'' is true or false. As an example, suppose we wish to determine if the statement
+For example, suppose we want to determine if 
 \begin{quote}
   The sky is green or $2 + 2 = 5$.
 \end{quote}
 is true or not. We have P is ``the sky is green'' and Q is ``$2 + 2 = 5$''. Since P is false and Q is true, we're in the third row of the table. The last entry is T, so the statement is true.
+
+One can similarly check the truth tables for AND and conditionals.
 
 \begin{table}
   \centering
@@ -264,8 +268,6 @@ is true or not. We have P is ``the sky is green'' and Q is ``$2 + 2 = 5$''. Sinc
   \label{tab:truth-table-and}
 \end{table}
 
-One can similarly check the truth tables for AND and conditionals.
-
 \begin{table}
   \centering
   \begin{tabular}{ccc}
@@ -279,7 +281,7 @@ One can similarly check the truth tables for AND and conditionals.
   \caption{Truth table for conditionals.}
   \label{tab:truth-table-conditionals}
 \end{table}
-Truth table can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{A concrete example is, ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true?
+Truth table can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true?
 
 \begin{table}
   \centering
@@ -312,7 +314,7 @@ Notice that in this case, there are $2 \cdot 2 \cdot 2 = 8$ possibilities.\siden
 One way to think of negation is that if a \knave says P, then a \knight would say $\neg$ P, and vice versa. Thus, the negation of ``The sky is blue'' is ``The sky is not blue''.
 
 \begin{definition}
-  Two statements are \emph{logically equivalent} if their truth values are the same, regardless of the truth values of their constituent clauses.
+  Two statements are \emph{logically equivalent} \marginnote{Two statements can be equivalent without being logically equivalent. For example, ``The number $n$ is an even prime'' and ``The number $n$ equals 2'' are equivalent, but not logically equivalent. Why? The reason the two statements are equivalent facts about $n$ is that $2$ is the only even prime. This is an \emph{arithmetic} fact. Logical equivalence means the two statements are the same \emph{without using external reasons}. One should really just be a restatement of the other.} if their truth values are the same, regardless of the truth values of their constituent clauses. 
 \end{definition}
 For example, if we rephrase a complex statement in a simpler form, then we say the two forms are equivalent. 
 
