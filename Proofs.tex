@@ -383,10 +383,10 @@ As you might have guessed from these three examples, we have the following:
   The \emph{converse} of the conditional ``If P then Q'' is the conditional ``If Q then P''.
 \end{definition}
 
-A common error, in math and in life, is to think that a conditional is equivalent to its converse. This is false! \sidenote{This is important!} It turns out that a conditional and its converse are \emph{independent}; that is, both could be true, both could be false, or one could be true and one could be false. For example, ``If the shape is a square, then it is a rectangle'' is true, but ``If the shape is a rectangle, then it is a square'' is false. \marginnote{Did you notice that a conditional is not the same as its converse?} Here are some more examples:
+A common error, in math and in life, is to think that a conditional is equivalent to its converse. This is false!\sidenote{This is important!} It turns out that a conditional and its converse are \emph{independent}; that is, both could be true, both could be false, or one could be true and one could be false. For example, ``If the shape is a square, then it is a rectangle'' is true, but ``If the shape is a rectangle, then it is a square'' is false. \marginnote{Did you notice that a conditional is not the same as its converse?} Here are some more examples:
 \begin{itemize}
     \item ``If she is a baby, then she cannot drive a car'' vs.\ ``If she cannot drive a car, then she is a baby.''
-    \item ``If your cooking tastes bad, then I will not eat it'' vs.\ ``If I do not eat this food, then your cooking is bad.'' \sidenote{Maybe I'm just full, mom! I mean, uh, hypothetically.}
+    \item ``If your cooking tastes bad, then I will not eat it'' vs.\ ``If I do not eat this food, then your cooking tastes bad.''\sidenote{Maybe I'm just full, mom! I mean, uh, hypothetically.}
     \item ``If my roommate dumps a bucket of water on my head at 3 am, then I wake up in the middle of the night'' vs.\ ``If I woke up in the middle of the night, then my roommate dumped a bucket of water on my head at 3 am.''
 \end{itemize}
 
@@ -395,8 +395,44 @@ Notice that in each one of these examples, one of the statements is true, but th
 \section{Biconditionals}
 \label{sec:biconditionals}
 
+The last logical construction we cover is the \emph{biconditional}. In the last section, we looked at \emph{logical equivalence}. Biconditionals are more general: they give any kind of equivalence of statements. For example, the statements ``$n$ is an even prime'' and ``$n$ equals $2$'' are equivalent. We can phrase this fact as
+\begin{quotation}
+  The number $n$ is an even prime if and only if $n$ equals $2$.
+\end{quotation}
 
+\begin{definition}
+  A \emph{biconditional} is a statement of the form ``P if and only if Q'', which means ``If P then Q and if Q then P''.
+\end{definition}
 
+That means
+\begin{quotation}
+  The number $n$ is an even prime if and only if $n$ equals $2$.
+\end{quotation}
+is the same as saying
+\begin{quotation}
+  If $n$ is an even prime then $n$ equals 2; and if $n$ equals 2 then $n$ is an even prime.
+\end{quotation}
+In other words, a biconditional is the same as a conditional and its converse taken together. Table~\ref{tab:truth-table-iff} gives the truth table for ``P if and only if Q''.
+
+\begin{table}
+  \centering
+  \begin{tabular}{ccccc}
+    \toprule
+    P & Q & If P then Q & If Q then P & P if and only if Q \\ \midrule
+    T & T & T & T & T\\
+    T & F & F & T & F\\
+    F & T & T & F & F\\
+    F & F & T & T & T\\ \bottomrule
+  \end{tabular}
+  \caption{Truth table for biconditionals.}
+  \label{tab:truth-table-iff}
+\end{table}
+
+Notice that ``P if and only if Q'' is true precisely when both P and Q have the same truth value.\marginnote{This is why a biconditional is like saying P and Q are equivalent statements.} In other words, either both P and Q are true, or both P and Q are false.
+
+\begin{proposition}\label{prop:biconditional-equiv-or}
+  The biconditional ``P if and only if Q'' is equivalent to the statement ``Either P and Q, or not P and not Q.''
+\end{proposition}
 
 \bibliographystyle{halpha}
 \end{document}
