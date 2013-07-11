@@ -5,6 +5,7 @@
 \usepackage{mathpazo}
 \usepackage[T1]{fontenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{marvosym}
 %\usepackage{mathrsfs}
 \usepackage[all]{xy}
 \usepackage{enumerate}
@@ -174,7 +175,22 @@ Dealing with conditionals is considerable trickier than dealing with conjunction
   \end{itemize}
   Whose identification do you check?\sidenote{You could of course just check everyone's ID, but generally you want to check the fewest number of people as possible.}
 \end{example}
-This should be easy: just the third person. Here, you are checking that the rule
+
+\begin{example}
+  Your friend has 4 cards, each of which has a letter on one side and a number on the other. Your friend then makes the statement, ``If the letter is a vowel, then the number on the other side is even.'' You want to check to see whether the statement is true or false. Suppose the 4 cards are lying on a table, and the sides visible to you read
+  \[
+  \framebox{A} \qquad \framebox{N} \qquad \framebox{4} \qquad \framebox{7}.
+  \]
+  Which cards do you turn over? \marginnote{Similar to the bouncer problem, you want to turn over the minimum number of cards.}
+\end{example}
+
+Try these both now. The words printed below will wait patiently while you solve these problems.
+
+\begin{center}
+{\Large\Clocklogo}
+\end{center}
+
+Okay, ready? The first question is easy: just check the third person's ID. Here, you are checking that the rule
 \begin{quote}
   If you are under 21, then you can only drink nonalcoholic beverages.
 \end{quote}
@@ -182,9 +198,9 @@ is satisfied. There is only \emph{one} situation which breaks this rule: someone
 
 Going back to the general case, this implies that the statement ``If P then Q'' is false when both P is true and Q is false, but is otherwise a true statement!
 
-To illustrate this last observation, we consider the following statements:\marginnote{One thing to observe about these examples is that in terms of logic, there's no need for there to be a \emph{causal relationship} between the two parts of a conditional. That is, even though there's absolutely no reason in the world that the incorrect arithmetic statement $2 + 2 = 5$ should affect the color of the sky, the statement ``If $2 + 2 = 5$, then the sky is blue'' is still considered true.}
+To illustrate this last observation, we consider the following statements:
 \begin{enumerate}
-    \item If $2 + 2 = 4$, then the sky is blue.
+    \item If $2 + 2 = 4$, then the sky is blue.\marginnote{One thing to observe about these examples is that in terms of logic, there's no need for there to be a \emph{causal relationship} between the two parts of a conditional. That is, even though there's absolutely no reason in the world that the incorrect arithmetic statement $2 + 2 = 5$ should affect the color of the sky, the statement ``If $2 + 2 = 5$, then the sky is blue'' is still considered true.}
     \item If $2 + 2 = 5$, then the sky is blue.
     \item If $2 + 2 = 5$, then the sky is green.
     \item If $2 + 2 = 4$, then the sky is green.
@@ -194,13 +210,7 @@ Of these, the first three are true, and the last is false.
   Given the statement, ``If it is raining, then the grass is wet'', what would have to be happening right now for the statement to be false? List all possibilities which make the statement false.
 \end{example}
 
-\begin{example}
-  Your friend has 4 cards, each of which has a letter on one side and a number on the other. Your friend then makes the statement, ``If the letter is a vowel, then the number on the other side is even.'' You want to check to see whether the statement is true or false. Suppose the 4 cards are lying on a table, and the sides visible to you read
-  \[
-  \framebox{A} \qquad \framebox{N} \qquad \framebox{4} \qquad \framebox{7}.
-  \]
-  Which cards do you turn over? \marginnote{Similar to the bouncer problem, you want to turn over the minimum number of cards.}
-\end{example}
+We still haven't talked about the card problem. \marginnote{You should have tried to solve it before you got to this point. If you didn't, you're a lazy bum.}
 
 \begin{claim}
   You would turn over the cards labeled A and 7.
