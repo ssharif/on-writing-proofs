@@ -291,7 +291,7 @@ One can similarly check the truth tables for AND and conditionals.
   \caption{Truth table for conditionals.}
   \label{tab:truth-table-conditionals}
 \end{table}
-Truth table can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true?
+Truth table can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true? We can see the answer in Table\ref{tab:truth-table-if-p-or-q-then-r}.
 
 \begin{table}
   \centering
@@ -358,12 +358,12 @@ These two examples are a special case of a general law:
   Suppose P and Q are statements.
   \begin{enumerate}[(a)]
       \item ``Not P and not Q'' is equivalent to ``Not `P or Q' ''.
-      \item ``Not P and not Q'' is equivalent to ``Not `P or Q' ''.
+      \item ``Not P or not Q'' is equivalent to ``Not `P and Q' ''.
   \end{enumerate}
 \end{theorem}
 
 \begin{proof}[Proof of part (a)]
-  If P is true, then $\neg$ P is false, which makes ``Not P or not Q'' false. But ``P or Q'' is also true, so ``Not `P or Q' '' is false as well. Similarly, if Q is true, both statements are false.
+  If P is true, then $\neg$ P is false, which makes ``Not P and not Q'' false. But ``P or Q'' is also true, so ``Not `P or Q' '' is false as well. Similarly, if Q is true, both statements are false.
 
   Now suppose both P and Q are false. Then ``Not P and not Q'' is certainly true. ``P or Q'' is false, so ``Not `P or Q' '' is true. Thus in this case both statements are true.
 
