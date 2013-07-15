@@ -389,6 +389,37 @@ As you might have guessed from these three examples, we have the following:
   A conditional is equivalent to its contrapositive.
 \end{theorem}
 
+\begin{proof}
+  Suppose our conditional is ``if P then Q''. This conditional is true \emph{unless} P is true and Q is false. Now consider the contrapositive ``if not Q then not P''. The latter is true \emph{unless} not Q is true and not P is false. But not Q is true is the same as saying Q is false, and not P is false is the same as saying P is true. Therefore the contrapositive is true except in the case where P is true and Q is false. As this is identical to the truth value of the original conditional, we see that the theorem holds.
+\end{proof}
+
+\begin{proof}[Alternate proof] \marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}
+  We construct a truth table to compare ``if P then Q'' with ``if not Q then not P'', and see that they have the same truth values in all cases. The claim follows.
+
+\marginnote{The symbol $\To$ is often used to mean ``implies''.}
+  \begin{table}
+    \centering
+    \begin{tabular}{cccccc}
+      \toprule
+      P & Q & $\neg$ Q & $\neg$ P & P $\To$ Q & $\neg$ P $\To$ $\neg$ Q \\ \midrule 
+      T & T & F & F & T & T \\
+      T & F & T & F & F & F \\
+      F & T & F & T & T & T \\
+      F & F & T & T & T & T \\
+      \bottomrule
+    \end{tabular}
+    \caption{Conditional and contrapositive}
+    \label{tab:conditional-contrapositive}
+  \end{table}
+\end{proof}
+
+Another important fact, which will come up again when we talk about counterexamples, is the following:
+\begin{theorem}
+  The negation of ``if P then Q'' is ``not P and Q''.
+\end{theorem}
+
+Notice that the negation is an and statement, not another conditional! The proof of this theorem is left as an exercise.
+
 \begin{definition}
   The \emph{converse} of the conditional ``If P then Q'' is the conditional ``If Q then P''.
 \end{definition}
