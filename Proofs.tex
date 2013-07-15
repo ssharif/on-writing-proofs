@@ -477,5 +477,33 @@ Notice that ``P if and only if Q'' is true precisely when both P and Q have the 
   The biconditional ``P if and only if Q'' is equivalent to the statement ``Either P and Q, or not P and not Q.''
 \end{proposition}
 
+
+\section{Open statements}
+\label{sec:open-statements}
+
+Consider the statement
+\begin{quote}
+  P: The integer $n$ is a prime.
+\end{quote}
+Is P true or false? Well, it depends on what $n$ is, of course! Statements like these are sometimes called \emph{open}, meaning that they don't by themselves have a truth value until you fill in the missing data (the value of $n$ in this case). We sometimes write open statements in functional notation: $P(n)$. Then we can say, for example,
+\begin{itemize}
+    \item $P(2)$ is true,
+    \item $P(4)$ is false, and
+    \item $P(\frac12)$ makes no sense.\sidenote{In P, $n$ is understood to be an integer. A clearer example might be taking P of a shape, like $P$(triangle) for example.}
+\end{itemize}
+
+  There are three common ways of turning an open statement into a regular statement. One you've already seen: just plug in a value! The second way is using the \emph{universal quantifier}, written $\forall$ or ``for all''.\sidenote{Alternatively: ``for every'' or ``for each''.} Here's an example with our $P(n)$ from above:
+  \begin{quote}
+    $\forall n$, $P(n)$.
+  \end{quote}
+  Plain as day, right? Okay, here it is in English:
+  \begin{quote}
+    For every integer $n$, $n$ is prime.\sidenote{To make the sentence grammatically correct, I've moved the word ``integer''.}
+  \end{quote}
+  One can rephrase this to the logically equivalent statement
+  \begin{quote}
+    Every integer is prime.
+  \end{quote}
+  which is obviously false (take $n = 4$). As one might guess, the quantifier means that no matter what you value you plug in for $n$, $P(n)$ should always be true. If you can find even a single exception, the whole sentence ``$\forall n, P(n)$'' is false.
 \bibliographystyle{halpha}
 \end{document}
