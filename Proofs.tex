@@ -36,6 +36,7 @@
 \maketitle
 
 \chapter{Propositional Logic}
+\label{cha:propositional-logic}
 
 \section{\Knights and \knaves}
 \label{sec:knights-knaves}
@@ -177,7 +178,7 @@ Dealing with conditionals is considerable trickier than dealing with conjunction
 \end{example}
 
 \begin{example}
-  Your friend has 4 cards, each of which has a letter on one side and a number on the other. Your friend then makes the statement, ``If the letter is a vowel, then the number on the other side is even.'' You want to check to see whether the statement is true or false. Suppose the 4 cards are lying on a table, and the sides visible to you read
+  Your friend has 4 cards, each of which has a letter on one side and an integer on the other. Your friend then makes the statement, ``If the letter is a vowel, then the number on the other side is even.'' You want to check to see whether the statement is true or false. Suppose the 4 cards are lying on a table, and the sides visible to you read
   \[
   \framebox{A} \qquad \framebox{N} \qquad \framebox{4} \qquad \framebox{7}.
   \]
@@ -324,15 +325,15 @@ Notice that in this case, there are $2 \cdot 2 \cdot 2 = 8$ possibilities.\siden
 One way to think of negation is that if a \knave says P, then a \knight would say $\neg$ P, and vice versa. Thus, the negation of ``The sky is blue'' is ``The sky is not blue''. The negation of ``$n$ is even'' is ``$n$ is odd''.
 
 \begin{definition}
-  Two statements are \emph{logically equivalent} \marginnote{Two statements can be equivalent without being logically equivalent. For example, ``The number $n$ is an even prime'' and ``The number $n$ equals 2'' are equivalent, but not logically equivalent. Why? The reason the two statements are equivalent facts about $n$ is that $2$ is the only even prime. This is an \emph{arithmetic} fact. Logical equivalence means the two statements are the same \emph{without using external reasons}. You can think of logical equivalence as just restating a sentence.} if their truth values are the same, regardless of the truth values of their constituent clauses. 
+  Two statements are \emph{logically equivalent} \marginnote{Two statements can be equivalent without being logically equivalent. For example, ``The integer $n$ is an even prime'' and ``The integer $n$ equals 2'' are equivalent, but not logically equivalent. Why? The reason the two statements are equivalent facts about $n$ is that $2$ is the only even prime. This is an \emph{arithmetic} fact. Logical equivalence means the two statements are the same \emph{without using external reasons}. You can think of logical equivalence as just restating a sentence.} if their truth values are the same, regardless of the truth values of their constituent clauses. 
 \end{definition}
 For example, if we rephrase a complex statement in a simpler form, then we say the two forms are equivalent. 
 
 \begin{example}
   Consider the two statements below:
   \begin{itemize}
-      \item The number $n$ is not even or is not a perfect square.
-      \item The number $n$ is not both even and a perfect square.
+      \item The integer $n$ is not even or is not a perfect square.
+      \item The integer $n$ is not both even and a perfect square.
   \end{itemize}
   Without knowing the value of $n$, we can see that the two statements are equivalent! There are four cases to check:
   \begin{enumerate}
@@ -440,7 +441,7 @@ Notice that in each one of these examples, one of the statements is true, but th
 
 The last logical construction we cover is the \emph{biconditional}. In the last section, we looked at \emph{logical equivalence}. Biconditionals are more general: they give any kind of equivalence of statements. For example, the statements ``$n$ is an even prime'' and ``$n$ equals $2$'' are equivalent. We can phrase this fact as
 \begin{quote}
-  The number $n$ is an even prime if and only if $n$ equals $2$.
+  The integer $n$ is an even prime if and only if $n$ equals $2$.
 \end{quote}
 
 \begin{definition}
@@ -449,7 +450,7 @@ The last logical construction we cover is the \emph{biconditional}. In the last 
 
 That means
 \begin{quote}
-  The number $n$ is an even prime if and only if $n$ equals $2$.
+  The integer $n$ is an even prime if and only if $n$ equals $2$.
 \end{quote}
 is the same as saying
 \begin{quote}
@@ -505,5 +506,91 @@ Is P true or false? Well, it depends on what $n$ is, of course! Statements like 
     Every integer is prime.
   \end{quote}
   which is obviously false (take $n = 4$). As one might guess, the quantifier means that no matter what you value you plug in for $n$, $P(n)$ should always be true. If you can find even a single exception, the whole sentence ``$\forall n, P(n)$'' is false.
+
+
+%%%%%%%%%%%%%%%%%%    Chapter 2    %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%    Set theory   %%%%%%%%%%%%%%%%%%%%
+
+\chapter{Set theory}
+\label{cha:set-theory}
+
+\section{What is a set?}
+\label{sec:what-set}
+
+A set is essentially\sidenote{Set theory is actually quite complicated, and in certain situations you have to be very careful about what is considered a set. However in most mathematical circumstances, this is a rare occurence.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
+
+\begin{definition}
+  Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$.
+\end{definition}
+
+If $S$ is the set of all even integers, we have $2 \in S$, $4 \in S$, $5 \notin S$, and $\text{hot dogs} \notin S$.
+
+A fundamental problem in mathematics is that of \emph{description} or \emph{representation}. The problem is this: we have some kind of mathematical object that we'd like to study\sidenote{Say, the circumference of a circle of diameter 1.}, but before we can study it, we need to figure out how to write it down, or talk about it\sidenote{Say, with a Greek letter.} That questions appears now: how do we describe a set?
+
+\subsection{How to describe a set}
+\label{sec:how-describe-set}
+
+There are three ways of doing this:
+
+\paragraph{List all the elements.}
+\label{sec:list-all-elements}
+
+We do this by writing down everything in the set between curly braces ($\{, \}$), and putting a comma in between consecutive elements:
+\begin{itemize}
+    \item $\{1\}$ is the set with a single element, the number $1$.
+    \item $\{\text{coffee}, \text{ice cream}, \text{beer}, \text{raspberries}, \text{rice}\}$ is a set containing some of my favorite things to eat and drink.
+    \item $\{\{1\}, \{\text{coffee}, \text{ice cream}, \text{beer}, \text{raspberries}, \text{rice}\}\}$ is the set containing exactly 2 elements; namely, each of the previous sets.
+    \item $\{\}$ is the set containing nothing, also called the \emph{empty set}.
+\end{itemize}
+At this point, I should tell you two important facts about sets: repetition doesn't matter, and order doesn't matter. That means that the sets
+\[
+\{1, 2, 3\} \quad \{1, 2, 1, 1, 3, 2\} \quad \{3, 3, 3, 3, 3, 3, 3, 2, 1\}
+\]
+are all \emph{the same} set. \marginnote{In other words: two sets $A$ and $B$ are different if you can find some $x$ which is an element of $A$ but not an element of $B$, or vice versa. In this case, 1 is in all three sets, 2 is in all three, and 3 is in all three, and there's nothing else to worry about.}
+
+There's a major problem with this representation of sets: if there are a lot, even infinitely many elements of the set, it can be hard to write them all down! Fortunately, we can use the magic of the ellipses\sidenote{Better known as ``dot dot dot''.}:
+\begin{itemize}
+    \item $\{1, 2, 3, \dots, 10\}$ is the set of integers from $1$ to $10$.
+    \item $\{2, 4, 6, \dots, 20\}$ is the set of even integers from $2$ to $20$.
+    \item $\{2, 4, 6, \dots\}$ is the set of all positive even integers.
+    \item $\{\dots, -4, -2, 0, 2, 4, 6, \dots\}$ is the set of all even integers.
+\end{itemize}
+Essentially, the $\dots$ says, ``You know what I mean'', or if you prefer, ``Yadda yadda yadda''.\marginnote{Little-known fact: the ancient Greek referred to a dot as a \emph{yadda}.}
+
+You're probably saying now, ``Wow, writing down sets is so easy! This is going to be a short chapter.'' Okay, smartie-pants---figure out what these sets are:
+\begin{itemize}
+    \item $\{3, 5, 7, \dots\}$.
+    \item $\{$o, t, f, s, e, $\dots\}$.
+\end{itemize}
+While you're mulling over these, try going the other way: write down the following sets in list form.
+\begin{itemize}
+    \item The set of all real numbers.
+    \item The set of people currently on Earth.
+    \item The set of all continuous real-valued functions on the real line.
+\end{itemize}
+Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letter of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another dilemma: the elements are too hard to list in any meaningful way.
+
+\paragraph{Give the set a special name.}
+\label{sec:give-set-special}
+
+Some sets come equipped with special names or symbols, and you can just refer to them with these. For example:
+\begin{itemize}
+    \item $\R$ means the set of all real numbers.
+    \item $\Z$ means the set of all integers.\sidenote{Number in German is \emph{Zahlen}.}
+    \item $\N$ means the set of \emph{natural numbers}; that is, $\{1, 2, 3, 4, \dots\}$.
+    \item $\Q$ means the set of \emph{rational numbers}; that is, all fractions where numerator and denominator are whole numbers.
+    \item $\emptyset$ means the empty set $\{\}$, the set containing nothing.
+\end{itemize}
+
+\paragraph{Use set-builder notation.}
+\label{sec:use-set-builder}
+
+\subsection{Properties of sets}
+\label{sec:properties-sets}
+
+
+
+
+
 \bibliographystyle{halpha}
 \end{document}
