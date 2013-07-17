@@ -568,7 +568,7 @@ While you're mulling over these, try going the other way: write down the followi
     \item The set of people currently on Earth.
     \item The set of all continuous real-valued functions on the real line.
 \end{itemize}
-Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letter of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another dilemma: the elements are too hard to list in any meaningful way.
+Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letter of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another issue: the elements are too hard to list in any meaningful way.\sidenote{We'll get back to this issue near the end of this course.}
 
 \paragraph{Give the set a special name.}
 \label{sec:give-set-special}
@@ -581,14 +581,54 @@ Some sets come equipped with special names or symbols, and you can just refer to
     \item $\Q$ means the set of \emph{rational numbers}; that is, all fractions where numerator and denominator are whole numbers.
     \item $\emptyset$ means the empty set $\{\}$, the set containing nothing.
 \end{itemize}
+In calculus, you also learned interval notation:
+\begin{itemize}
+    \item $(a,b)$ means all $x \in \R$ which satisfy $a < x < b$.
+    \item $[a,b)$ means all $x \in \R$ which satisfy $a \leq x < b$.
+    \item $(a,b]$ means all $x \in \R$ which satisfy $a < x \leq b$.
+    \item $[a,b]$ means all $x \in \R$ which satisfy $a \leq x \leq b$.
+\end{itemize}
+
 
 \paragraph{Use set-builder notation.}
 \label{sec:use-set-builder}
 
+The clearest way to list a set is with \emph{set-builder notation}. There are two related versions of this notation. The first is in the form
+\[
+\{ x \text{ of a certain well-understood type} | \text{ condition on } x\}.
+\]
+The vertical bar is read ``such that''\sidenote{Some texts use a colon instead of a vertical bar.} Some examples:
+\begin{itemize}
+    \item $\{x \in \Z | x \text{ is even}\}$
+    \item $\{x \in \R | x > 0 \}$
+    \item $\{x \in \R | x^2 - 1 = 0\}$
+    \item $\{x \in \Z | \exists n \in \Z \text{ such that } x = 2n\}$
+    \item $\{x \in \R | \forall y \in \R, x > y\}$
+\end{itemize}
+What are these sets?\sidenote{In other words, find a more succinct description of these sets.} The way to understand these sets is to take $x$ of the type to the left of the vertical bar and see if the condition on the right is true or not for $x$. If it is true, then $x$ is in the set. If it is false, then $x$ is not in the set. The first example is clear: it is the set of even numbers. We check $x = 2$; since $2$ is even, the condition holds, and $2$ is in the set. We check $x = 5$; since $5$ is not even, the condition does not hold, and $5$ is not in the set.
+
+Similarly, the second example is the set of positive real numbers. The third is the set $\{-1, 1\}$. The fourth uses the existential quantifier, and is in fact also the set of all even numbers.\marginnote{Later, we will show how to prove this. For now, it is enough to figure out what the answer is.} Take $x = 2$. The question is then does there exist an integer $n$ such that $2n = x$, or in other words $2n = 2$? The answer is yes ($n = 1$), so $2$ is in the set. Now try $x = 3$. Does there exist an integer $n$ such that $2n = 3$? The answer is no: only $n = \frac32$ works, but this is not an integer. Therefore $3$ is not in the set. 
+
+The last example is the empty set! Take $x = 1$. Is it true that for every real number $y$, that $x > y$? Of course not---just take $y = 2$! Now try $x = 100$. Is it true that for every real number $y$, that $x > y$? No---now take $y = 101$. The condition is saying that $x$ is bigger than every real number; but we know that there is no such number.\marginnote{For the general case, given any $x$, we can always choose $y = x + 1$, which forces $x < y$.} Therefore the set is empty.
+
+The second version of set-builder notation is
+\[
+\{ \text{algebraic expression which lies in the set} | \text{condition that (parts) of the expression must satisfy}\}.
+\]
+Examples:
+\begin{itemize}
+    \item $\{2n | n \in \Z\}$
+    \item $\{2n | n \text{ is an even integer}\}$
+    \item $\{x^2 | x \in \R, x < -1\}$
+\end{itemize}
+The first set is the set of all even integers. We can let $n$ be any integer, so let's try $n = 1$. Then the expression on the left is $2 \cdot 1 = 2$, so $2$ is in the set. We can also let $n = 2$, which makes $2n = 4$, and we see that $4$ is in the set. 
+
+The second set is all integer multiples of $4$ (why?), and the last set is the interval $(1, \infty)$. This last is the squares of all numbers smaller than $-1$; for example, $(-1.5)^2$, $(-2)^2$, $(-10)^2$, and so forth all lie in this set.
+
 \subsection{Properties of sets}
 \label{sec:properties-sets}
 
-
+Cardinality
 
 
 
