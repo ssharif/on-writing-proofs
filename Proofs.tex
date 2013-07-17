@@ -495,17 +495,17 @@ Is P true or false? Well, it depends on what $n$ is, of course! Statements like 
 
   There are three common ways of turning an open statement into a regular statement. One you've already seen: just plug in a value! The second way is using the \emph{universal quantifier}, written $\forall$ or ``for all''.\sidenote{Alternatively: ``for every'' or ``for each''.} Here's an example with our $P(n)$ from above:
   \begin{quote}
-    $\forall n$, $P(n)$.
+    $\forall n \in \Z$, $P(n)$.
   \end{quote}
   Plain as day, right? Okay, here it is in English:
   \begin{quote}
-    For every integer $n$, $n$ is prime.\sidenote{To make the sentence grammatically correct, I've moved the word ``integer''.}
+    For every integer $n$, $n$ is prime.
   \end{quote}
   One can rephrase this to the logically equivalent statement
   \begin{quote}
     Every integer is prime.
   \end{quote}
-  which is obviously false (take $n = 4$). As one might guess, the quantifier means that no matter what you value you plug in for $n$, $P(n)$ should always be true. If you can find even a single exception, the whole sentence ``$\forall n, P(n)$'' is false.
+  which is obviously false (take $n = 4$). As one might guess, the quantifier means that no matter what value you plug in for $n$, $P(n)$ should always be true. If you can find even a single exception, the whole sentence ``$\forall n \in \Z, P(n)$'' is false.
 
 
 %%%%%%%%%%%%%%%%%%    Chapter 2    %%%%%%%%%%%%%%%%%%%%
@@ -517,7 +517,7 @@ Is P true or false? Well, it depends on what $n$ is, of course! Statements like 
 \section{What is a set?}
 \label{sec:what-set}
 
-A set is essentially\sidenote{Set theory is actually quite complicated, and in certain situations you have to be very careful about what is considered a set. However in most mathematical circumstances, this is a rare occurence.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
+A set is essentially\sidenote{Set theory is actually quite complicated, and in certain situations you have to be very careful about what is considered a set. However this is a fairly rare situation.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
 
 \begin{definition}
   Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$.
@@ -525,7 +525,7 @@ A set is essentially\sidenote{Set theory is actually quite complicated, and in c
 
 If $S$ is the set of all even integers, we have $2 \in S$, $4 \in S$, $5 \notin S$, and $\text{hot dogs} \notin S$.
 
-A fundamental problem in mathematics is that of \emph{description} or \emph{representation}. The problem is this: we have some kind of mathematical object that we'd like to study\sidenote{Say, the circumference of a circle of diameter 1.}, but before we can study it, we need to figure out how to write it down, or talk about it\sidenote{Say, with a Greek letter.} That questions appears now: how do we describe a set?
+A fundamental problem in mathematics is that of \emph{description} or \emph{representation}. The problem is this: we have some kind of mathematical object that we'd like to study\sidenote{Say, the circumference of a circle of diameter 1.}, but before we can study it, we need to figure out how to write it down, or talk about it\sidenote{Say, with a Greek letter.}. That problem appears now: how do we describe a set?
 
 \subsection{How to describe a set}
 \label{sec:how-describe-set}
@@ -538,7 +538,7 @@ There are three ways of doing this:
 We do this by writing down everything in the set between curly braces ($\{, \}$), and putting a comma in between consecutive elements:
 \begin{itemize}
     \item $\{1\}$ is the set with a single element, the number $1$.
-    \item $\{\text{coffee}, \text{ice cream}, \text{beer}, \text{raspberries}, \text{rice}\}$ is a set containing some of my favorite things to eat and drink.
+    \item $\{\text{coffee}, \text{ice cream}, \text{beer}, \text{raspberries}, \text{rice}\}$ is a set containing some of my favorite things to eat and drink.\marginnote{Not all at the same time!}
     \item $\{\{1\}, \{\text{coffee}, \text{ice cream}, \text{beer}, \text{raspberries}, \text{rice}\}\}$ is the set containing exactly 2 elements; namely, each of the previous sets.
     \item $\{\}$ is the set containing nothing, also called the \emph{empty set}.
 \end{itemize}
@@ -548,14 +548,14 @@ At this point, I should tell you two important facts about sets: repetition does
 \]
 are all \emph{the same} set. \marginnote{In other words: two sets $A$ and $B$ are different if you can find some $x$ which is an element of $A$ but not an element of $B$, or vice versa. In this case, 1 is in all three sets, 2 is in all three, and 3 is in all three, and there's nothing else to worry about.}
 
-There's a major problem with this representation of sets: if there are a lot, even infinitely many elements of the set, it can be hard to write them all down! Fortunately, we can use the magic of the ellipses\sidenote{Better known as ``dot dot dot''.}:
+There's a major problem with this representation of sets: if there are a lot, even infinitely many elements of the set, it can be hard to write them all down! Fortunately, we can use the magic of ellipses\sidenote{Better known as ``dot dot dot''.}:
 \begin{itemize}
     \item $\{1, 2, 3, \dots, 10\}$ is the set of integers from $1$ to $10$.
     \item $\{2, 4, 6, \dots, 20\}$ is the set of even integers from $2$ to $20$.
     \item $\{2, 4, 6, \dots\}$ is the set of all positive even integers.
     \item $\{\dots, -4, -2, 0, 2, 4, 6, \dots\}$ is the set of all even integers.
 \end{itemize}
-Essentially, the $\dots$ says, ``You know what I mean'', or if you prefer, ``Yadda yadda yadda''.\marginnote{Little-known fact: the ancient Greek referred to a dot as a \emph{yadda}.}
+Essentially, the $\dots$ says, ``You know what I mean'', or if you prefer, ``Yadda yadda yadda''.\marginnote{Little-known fact: the ancient Greeks referred to a dot as a \emph{yadda}.}
 
 You're probably saying now, ``Wow, writing down sets is so easy! This is going to be a short chapter.'' Okay, smartie-pants---figure out what these sets are:
 \begin{itemize}
@@ -566,9 +566,10 @@ While you're mulling over these, try going the other way: write down the followi
 \begin{itemize}
     \item The set of all real numbers.
     \item The set of people currently on Earth.
-    \item The set of all continuous real-valued functions on the real line.
+    \item The set of people who have exactly one red-headed sibling.
+    \item The set of all even numbers which can be written as the sum of two primes.\sidenote{If you are familiar with Goldbach's conjecture, reward yourself with a coffee, ice cream cone, beer, raspberries, or rice.}
 \end{itemize}
-Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letter of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another issue: the elements are too hard to list in any meaningful way.\sidenote{We'll get back to this issue near the end of this course.}
+Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letters of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another issue: the elements are too hard to list in any meaningful way.\sidenote{We'll get back to this issue near the end of this course.}
 
 \paragraph{Give the set a special name.}
 \label{sec:give-set-special}
@@ -595,15 +596,15 @@ In calculus, you also learned interval notation:
 
 The clearest way to list a set is with \emph{set-builder notation}. There are two related versions of this notation. The first is in the form
 \[
-\{ x \text{ of a certain well-understood type} | \text{ condition on } x\}.
+\{ x \text{ of a certain well-understood type} \mid \text{ condition on } x\}.
 \]
-The vertical bar is read ``such that''\sidenote{Some texts use a colon instead of a vertical bar.} Some examples:
+The vertical bar is read ``such that''.\sidenote{Some texts use a colon instead of a vertical bar.} Some examples:
 \begin{itemize}
-    \item $\{x \in \Z | x \text{ is even}\}$
-    \item $\{x \in \R | x > 0 \}$
-    \item $\{x \in \R | x^2 - 1 = 0\}$
-    \item $\{x \in \Z | \exists n \in \Z \text{ such that } x = 2n\}$
-    \item $\{x \in \R | \forall y \in \R, x > y\}$
+    \item $\{x \in \Z \mid x \text{ is even}\}$
+    \item $\{x \in \R \mid x > 0 \}$
+    \item $\{x \in \R \mid x^2 - 1 = 0\}$
+    \item $\{x \in \Z \mid \exists n \in \Z \text{ such that } x = 2n\}$
+    \item $\{x \in \R \mid \forall y \in \R, x > y\}$
 \end{itemize}
 What are these sets?\sidenote{In other words, find a more succinct description of these sets.} The way to understand these sets is to take $x$ of the type to the left of the vertical bar and see if the condition on the right is true or not for $x$. If it is true, then $x$ is in the set. If it is false, then $x$ is not in the set. The first example is clear: it is the set of even numbers. We check $x = 2$; since $2$ is even, the condition holds, and $2$ is in the set. We check $x = 5$; since $5$ is not even, the condition does not hold, and $5$ is not in the set.
 
@@ -613,13 +614,13 @@ The last example is the empty set! Take $x = 1$. Is it true that for every real 
 
 The second version of set-builder notation is
 \[
-\{ \text{algebraic expression which lies in the set} | \text{condition that (parts) of the expression must satisfy}\}.
+\{ \text{algebraic expression which lies in the set} \mid \text{condition that (parts) of the expression must satisfy}\}.
 \]
 Examples:
 \begin{itemize}
-    \item $\{2n | n \in \Z\}$
-    \item $\{2n | n \text{ is an even integer}\}$
-    \item $\{x^2 | x \in \R, x < -1\}$
+    \item $\{2n \mid n \in \Z\}$
+    \item $\{2n \mid n \text{ is an even integer}\}$
+    \item $\{x^2 \mid x \in \R, x < -1\}$
 \end{itemize}
 The first set is the set of all even integers. We can let $n$ be any integer, so let's try $n = 1$. Then the expression on the left is $2 \cdot 1 = 2$, so $2$ is in the set. We can also let $n = 2$, which makes $2n = 4$, and we see that $4$ is in the set. 
 
