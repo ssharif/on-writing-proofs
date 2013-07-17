@@ -519,13 +519,13 @@ The second way is using the \emph{universal quantifier}, written $\forall$ or ``
 
 Conditionals are often read with an invisible ``for all'' in front:
 \begin{quote}
-  If $x$ is prime, then $x$ is odd.
+  If $n$ is prime, then $n$ is odd.
 \end{quote}
 is understood to mean
 \begin{quote}
-  For all integers $x$, if $x$ is prime, then $x$ is odd.
+  For all integers $n$, if $n$ is prime, then $n$ is odd.
 \end{quote}
-The first sentence \emph{could be} viewed as true if, say, we knew that $x = 3$. However, since the ``for all'' part is understood, the statement is false, since $x = 2$ is a prime which is not odd.
+The first sentence \emph{could be} viewed as true if, say, we knew that $n = 3$. However, since the ``for all'' part is understood, the statement is false, since $n = 2$ is a prime which is not odd.
 
 
 \paragraph{The existential quantifier.}
@@ -533,11 +533,11 @@ The first sentence \emph{could be} viewed as true if, say, we knew that $x = 3$.
 
 A third method is to use an \emph{existential quantifier}. We use the symbol $\exists$, which means ``there exists''. The construction looks like
 \begin{quote}
-  $\exists x$ such that some condition holds. \marginnote{``There exists'' always pairs with ``such that''.}
+  $\exists n$ such that $P(n)$. \marginnote{``There exists'' always pairs with ``such that''.}
 \end{quote}
-The statement is true if there is \emph{at least one} $x$ for which the condition holds. For example,
+The statement is true if there is \emph{at least one} $n$ for which the condition $P(n)$ holds. For example,
 \begin{itemize}
-    \item $\exists$ a prime number $n$ such that $n$ is even.
+    \item $\exists$ a prime number $n$ such that $n$ is even. \marginnote{There is an equivalent phrasing using ``for some'': $n$ is even for some prime number $n$, or $n$ is a perfect square for some prime number $n$. Either way is fine.}
     \item $\exists$ a prime number $n$ such that $n$ is a perfect square.
 \end{itemize}
 The first one is true, since $n = 2$ works. Notice that $n = 3$ is a prime which is not even, but this does not affect the truth of the statement; we only need a single $n$ which works.
@@ -546,8 +546,9 @@ The second statement is false, as no prime number can be a perfect square; that 
 
 
 \paragraph{Negating quantifiers.}
+\label{sec:negat-quant}
 
-When negating quantified statements, the quantifiers ``swap''.\marginnote{I highly recommend spending five minutes with each of these pairs of statements to understand why one is the negation of the other. Don't try to understand these mechanically; really try to understand what it would mean for the first sentence to be false.}
+When negating quantified statements, the quantifiers ``swap''.\marginnote{I highly recommend spending five minutes with each of these pairs of statements to understand why one is the negation of the other. Don't try to understand these mechanically; really try to understand what it would mean for the first sentence to be false. You should also determine which of the sentences are true and which are false.}
 \begin{itemize}
     \item The negation of ``$\forall$ integers $n, 2n$ is even'' is ``$\exists$ an integer $n$ such that $2n$ is odd.''
     \item The negation of ``$\forall$ rectangles $R$, $R$ is a square'' is ``$\exists$ a rectangle $R$ such that $R$ is not a square''.
@@ -565,7 +566,7 @@ When negating quantified statements, the quantifiers ``swap''.\marginnote{I high
 \section{What is a set?}
 \label{sec:what-set}
 
-A set is essentially\sidenote{Set theory is actually quite complicated, and in certain situations you have to be very careful about what is considered a set. However this is a fairly rare situation.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
+A set is essentially\marginnote{Set theory is actually quite complicated, and in certain situations you have to be very careful about what is considered a set. However this is a fairly rare situation.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
 
 \begin{definition}
   Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$. Two sets are the equal if they have exactly the same elements.
@@ -605,7 +606,7 @@ There's a major problem with this representation of sets: if there are a lot, ev
 \end{itemize}
 Essentially, the $\dots$ says, ``You know what I mean'', or if you prefer, ``Yadda yadda yadda''.\marginnote{Little-known fact: the ancient Greeks referred to a dot as a \emph{yadda}.}
 
-You're probably saying now, ``Wow, writing down sets is so easy! This is going to be a short chapter.'' Okay, smartie-pants---figure out what these sets are:
+You're probably saying now, ``Wow, writing down sets is so easy! This is going to be a short chapter.'' Okay, smarty-pants---figure out what these sets are:
 \begin{itemize}
     \item $\{3, 5, 7, \dots\}$.
     \item $\{$o, t, f, s, e, $\dots\}$.
@@ -675,7 +676,7 @@ Examples:
 \end{itemize}
 The first set is the set of all even integers. We can let $n$ be any integer, so let's try $n = 1$. Then the expression on the left is $2 \cdot 1 = 2$, so $2$ is in the set. We can also let $n = 2$, which makes $2n = 4$, and we see that $4$ is in the set. 
 
-The second set is all integer multiples of $4$ (why?), and the last set is the interval $(1, \infty)$. This last is the set of squares of all numbers smaller than $-1$; for example, $(-1.5)^2$, $(-2)^2$, $(-10)^2$, and so forth all lie in this set.
+The second set is all integer multiples of $4$ (why?), and the last set is the interval $(1, \infty)$. This last is the set of squares of all numbers smaller than $-1$; for example, $(-1.5)^2$, $(-2)^2$, and $(-10)^2$ all lie in this set.
 
 \subsection{Properties of sets}
 \label{sec:properties-sets}
