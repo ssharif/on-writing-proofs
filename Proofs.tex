@@ -69,11 +69,11 @@ Now let's do Example~\ref{ex:knight-knave-1}.
 \end{claim}
 
 \begin{proof}
-  If Azog were a \knight, then he could not say that he is a \knave, for then he'd be lying. If Azog were a \knave, then again he could not say that he is a \knave, for then he'd be telling the truth. Either way, Azog cannot have said that he is a \knave. Therefore Bartholomew's statement is false, \marginnote{Note that Bartholomew isn't saying that Azog is a \knave, but rather that \emph{Azog says} that Azog is a \knave.} hence Bartholomew is a \knave, and Cynthia's statement is true, hence she is a \knight. As for Azog, from the information given, there is now way of determining what he is.
+  If Azog were a \knight, then he could not say that he is a \knave, for then he'd be lying. If Azog were a \knave, then again he could not say that he is a \knave, for then he'd be telling the truth. Either way, Azog cannot have said that he is a \knave. Therefore Bartholomew's statement is false, \marginnote{Note that Bartholomew isn't saying that Azog is a \knave, but rather that \emph{Azog says} that Azog is a \knave.} hence Bartholomew is a \knave, and Cynthia's statement is true, hence she is a \knight. As for Azog, from the information given, there is no way of determining what he is.
 \end{proof}
 
 
-Notice how we wrote this out: first, the answer under the label ``Claim'', then the explanation with the label ``Proof''. Proofs are the main subject of this book. You'll notice immediately that the proof is written in complete sentences put together into a paragraph; that is, a proof is a written form, like an essay, and should conform to the usual standards for a properly written essay, including correct spelling and grammar.\marginnote{There are many ingredients to a correctly written mathematical proof. We will discuss these ingredients in detail in the remainder of this book.} Additionally, the proof is written as a formal, logical argument, where each statement is carefully explained. In the problems below, you should write out your answers in the same format as I've done above.
+Notice how we wrote this out: first, the answer under the label ``Claim'', then the explanation with the label ``Proof''. The end of the proof is marked with a box, called a \emph{tombstone}.\sidenote{Because you totally killed the problem.} Proofs are the main subject of this book. You'll notice immediately that the proof is written in complete sentences put together into a paragraph; that is, a proof is a written form, like an essay, and should conform to the usual standards for a properly written essay, including correct spelling and grammar.\marginnote{There are many ingredients to a correctly written mathematical proof. We will discuss these ingredients in detail in the remainder of this book.} Additionally, the proof is written as a formal, logical argument, where each statement is carefully explained. In the problems below, you should write out your answers in the same format as I've done above.
 
 \input{hw1.1}
 
@@ -102,7 +102,7 @@ Now we solve the problem.
 \end{claim}
 
 \begin{proof}
-  Suppose Arjun is a \knight. Then both parts of his statement are true. But the first part of his statement is that he is a \knave, which is the opposite of what we assumed. So Arjun must be a \knave. Then his statement must be false. The first part of his statement, that he is a \knave, is true, so the second part must be false. Therefore Bathsheba is also a \knave.
+  Suppose Arjun is a \knight. Then both parts of his statement are true. But the first part of his statement is that he is a \knave, which is the opposite of what we assumed. So Arjun must be a \knave. Thus his statement as a whole must be false. The first part of his statement, that he is a \knave, is true, so the second part must be false. Therefore Bathsheba is also a \knave.
 \end{proof}
 
 Notice that making two separate statements is not the same as putting an AND between them; that is, if the puzzle were instead
@@ -193,7 +193,7 @@ Try these both now. The words printed below will wait patiently while you solve 
 
 Okay, ready? The first question is easy: just check the third person's ID. Here, you are checking that the rule
 \begin{quote}
-  If you are under 21, then you can only drink nonalcoholic beverages.
+  If you are under 21, then your drink must be nonalcoholic.
 \end{quote}
 is satisfied. There is only \emph{one} situation which breaks this rule: someone under 21 who is drinking an alcoholic beverage. 
 
@@ -292,7 +292,7 @@ One can similarly check the truth tables for AND and conditionals.
   \caption{Truth table for conditionals.}
   \label{tab:truth-table-conditionals}
 \end{table}
-Truth table can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true? We can see the answer in Table~\ref{tab:truth-table-if-p-or-q-then-r}.
+Truth tables can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true? We can see the answer in Table~\ref{tab:truth-table-if-p-or-q-then-r}.
 
 \begin{table}
   \centering
@@ -322,10 +322,10 @@ Notice that in this case, there are $2 \cdot 2 \cdot 2 = 8$ possibilities.\siden
 \begin{definition}
   The \emph{negation} of a statement P is a statement Q whose truth value is always the opposite of the truth value of P. We often write Q as ``not P'' or $\neg$ P.
 \end{definition}
-One way to think of negation is that if a \knave says P, then a \knight would say $\neg$ P, and vice versa. Thus, the negation of ``The sky is blue'' is ``The sky is not blue''. The negation of ``$n$ is even'' is ``$n$ is odd''.
+One way to think of negation is that if a \knave says P, then a \knight would say $\neg$ P, and vice versa. Thus, the negation of ``The sky is blue'' is ``The sky is not blue''. The negation of ``$n$ is even'' is ``$n$ is not even''.
 
 \begin{definition}
-  Two statements are \emph{logically equivalent} \marginnote{Two statements can be equivalent without being logically equivalent. For example, ``The integer $n$ is an even prime'' and ``The integer $n$ equals 2'' are equivalent, but not logically equivalent. Why? The reason the two statements are equivalent facts about $n$ is that $2$ is the only even prime. This is an \emph{arithmetic} fact. Logical equivalence means the two statements are the same \emph{without using external reasons}. You can think of logical equivalence as just restating a sentence.} if their truth values are the same, regardless of the truth values of their constituent clauses. 
+  Two statements are \emph{logically equivalent} \marginnote{Two statements can be equivalent without being logically equivalent. For example, ``The integer $n$ is an even prime'' and ``The integer $n$ equals 2'' are equivalent, but not logically equivalent. Why? The reason the two statements are equivalent facts about $n$ is that $2$ is the only even prime. This is a \emph{mathematical} fact. Logical equivalence means the two statements are the same \emph{without using external reasons}. You can think of logical equivalence as just restating a sentence.} if their truth values are the same, regardless of the truth values of their constituent clauses. 
 \end{definition}
 For example, if we rephrase a complex statement in a simpler form, then we say the two forms are equivalent. 
 
@@ -391,11 +391,11 @@ As you might have guessed from these three examples, we have the following:
 \end{theorem}
 
 \begin{proof}
-  Suppose our conditional is ``if P then Q''. This conditional is true \emph{unless} P is true and Q is false. Now consider the contrapositive ``if not Q then not P''. The latter is true \emph{unless} not Q is true and not P is false. But not Q is true is the same as saying Q is false, and not P is false is the same as saying P is true. Therefore the contrapositive is true except in the case where P is true and Q is false. As this is identical to the truth value of the original conditional, we see that the theorem holds.
+  Suppose our conditional is ``If P then Q''. This conditional is true \emph{unless} P is true and Q is false. Now consider the contrapositive ``If not Q then not P''. The latter is true \emph{unless} not Q is true and not P is false. But not Q is true is the same as saying Q is false, and not P is false is the same as saying P is true. Therefore the contrapositive is true except in the case where P is true and Q is false. As this is identical to the truth value of the original conditional, we see that the theorem holds.
 \end{proof}
 
 \begin{proof}[Alternate proof] \marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}
-  We construct a truth table to compare ``if P then Q'' with ``if not Q then not P'', and see that they have the same truth values in all cases. The claim follows.
+  We construct a truth table to compare ``If P then Q'' with ``If not Q then not P'', and see that they have the same truth values in all cases. The claim follows.
 
 \marginnote{The symbol $\To$ is often used to mean ``implies''.}
   \begin{table}
@@ -416,7 +416,7 @@ As you might have guessed from these three examples, we have the following:
 
 Another important fact, which will come up again when we talk about counterexamples, is the following:
 \begin{theorem}\label{thm:negation-conditional}
-  The negation of ``if P then Q'' is ``not P and Q''.
+  The negation of ``If P then Q'' is ``Q and not P''.
 \end{theorem}
 
 Notice that the negation is an and statement, not another conditional! The proof of this theorem is left as an exercise.
@@ -427,7 +427,7 @@ Notice that the negation is an and statement, not another conditional! The proof
 
 A common error, in math and in life, is to think that a conditional is equivalent to its converse. This is false!\sidenote{This is important!} It turns out that a conditional and its converse are \emph{independent}; that is, both could be true, both could be false, or one could be true and one could be false. For example, ``If the shape is a square, then it is a rectangle'' is true, but ``If the shape is a rectangle, then it is a square'' is false. \marginnote{Did you notice that a conditional is not the same as its converse?} Here are some more examples:
 \begin{itemize}
-    \item ``If she is a baby, then she cannot drive a car'' vs.\ ``If she cannot drive a car, then she is a baby.''
+    \item ``If he is a baby, then she cannot drive a car'' vs.\ ``If he cannot drive a car, then he is a baby.''
     \item ``If your cooking tastes bad, then I will not eat it'' vs.\ ``If I do not eat this food, then your cooking tastes bad.''\sidenote{Maybe I'm just full, mom! I mean, uh, hypothetically.}
     \item ``If my roommate dumps a bucket of water on my head at 3 am, then I wake up in the middle of the night'' vs.\ ``If I woke up in the middle of the night, then my roommate dumped a bucket of water on my head at 3 am.''
 \end{itemize}
@@ -517,6 +517,43 @@ The second way is using the \emph{universal quantifier}, written $\forall$ or ``
   \end{itemize}
   The first one is true: when you multiply any integer by 2, the result is \emph{always} even. The second one is false: it's certainly possible that a given rectangle happens to be a square, but that's not true for \emph{every} rectangle. Thus the statement as a whole is false.
 
+Conditionals are often read with an invisible ``for all'' in front:
+\begin{quote}
+  If $x$ is prime, then $x$ is odd.
+\end{quote}
+is understood to mean
+\begin{quote}
+  For all integers $x$, if $x$ is prime, then $x$ is odd.
+\end{quote}
+The first sentence \emph{could be} viewed as true if, say, we knew that $x = 3$. However, since the ``for all'' part is understood, the statement is false, since $x = 2$ is a prime which is not odd.
+
+
+\paragraph{The existential quantifier.}
+\label{sec:exist-quant}
+
+A third method is to use an \emph{existential quantifier}. We use the symbol $\exists$, which means ``there exists''. The construction looks like
+\begin{quote}
+  $\exists x$ such that some condition holds. \marginnote{``There exists'' always pairs with ``such that''.}
+\end{quote}
+The statement is true if there is \emph{at least one} $x$ for which the condition holds. For example,
+\begin{itemize}
+    \item $\exists$ a prime number $n$ such that $n$ is even.
+    \item $\exists$ a prime number $n$ such that $n$ is a perfect square.
+\end{itemize}
+The first one is true, since $n = 2$ works. Notice that $n = 3$ is a prime which is not even, but this does not affect the truth of the statement; we only need a single $n$ which works.
+
+The second statement is false, as no prime number can be a perfect square; that is, we cannot find even a single prime $n$ for which the condition holds.
+
+
+\paragraph{Negating quantifiers.}
+
+When negating quantified statements, the quantifiers ``swap''.\marginnote{I highly recommend spending five minutes with each of these pairs of statements to understand why one is the negation of the other. Don't try to understand these mechanically; really try to understand what it would mean for the first sentence to be false.}
+\begin{itemize}
+    \item The negation of ``$\forall$ integers $n, 2n$ is even'' is ``$\exists$ an integer $n$ such that $2n$ is odd.''
+    \item The negation of ``$\forall$ rectangles $R$, $R$ is a square'' is ``$\exists$ a rectangle $R$ such that $R$ is not a square''.
+    \item The negation of ``$\exists$ a prime number $n$ such that $n$ is even'' is ``$\forall$ prime numbers $n$, $n$ is odd.''
+    \item The negation of ``$\exists$ a prime number $n$ such that $n$ is a perfect square'' is ``$\forall$ prime numbers $n$, $n$ is not a perfect square''.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%    Chapter 2    %%%%%%%%%%%%%%%%%%%%
@@ -534,7 +571,7 @@ A set is essentially\sidenote{Set theory is actually quite complicated, and in c
   Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$. Two sets are the equal if they have exactly the same elements.
 \end{definition}
 
-If $S$ is the set of all even integers, we have $2 \in S$, $4 \in S$, $5 \notin S$, and $\text{hot dogs} \notin S$.
+If $S$ is the set of all even integers, we have $2 \in S$, $4 \in S$, $5 \notin S$, and $\text{``hot dogs''} \notin S$.
 
 A fundamental problem in mathematics is that of \emph{description} or \emph{representation}. The problem is this: we have some kind of mathematical object that we'd like to study\sidenote{Say, the circumference of a circle of diameter 1.}, but before we can study it, we need to figure out how to write it down, or talk about it\sidenote{Say, with a Greek letter.}. That problem appears now: how do we describe a set?
 
@@ -559,7 +596,7 @@ At this point, I should tell you two important facts about sets: repetition does
 \]
 are all \emph{the same} set. \marginnote{In other words: two sets $A$ and $B$ are different if you can find some $x$ which is an element of $A$ but not an element of $B$, or vice versa. In this case, 1 is in all three sets, 2 is in all three, and 3 is in all three, and there's nothing else to worry about.}
 
-There's a major problem with this representation of sets: if there are a lot, even infinitely many elements of the set, it can be hard to write them all down! Fortunately, we can use the magic of ellipses\sidenote{Better known as ``dot dot dot''.}:
+There's a major problem with this representation of sets: if there are a lot, even infinitely many elements in the set, it can be hard to write them all down! Fortunately, we can use the magic of ellipses\sidenote{Better known as ``dot dot dot''.}:
 \begin{itemize}
     \item $\{1, 2, 3, \dots, 10\}$ is the set of integers from $1$ to $10$.
     \item $\{2, 4, 6, \dots, 20\}$ is the set of even integers from $2$ to $20$.
@@ -575,12 +612,12 @@ You're probably saying now, ``Wow, writing down sets is so easy! This is going t
 \end{itemize}
 While you're mulling over these, try going the other way: write down the following sets in list form.
 \begin{itemize}
-    \item The set of all real numbers.
+    \item The set of all real numbers.\sidenote{We'll get back to this example near the end of this course.}
     \item The set of people currently on Earth.
     \item The set of people who have exactly one red-headed sibling.
-    \item The set of all even numbers which can be written as the sum of two primes.\sidenote{If you are familiar with Goldbach's conjecture, reward yourself with a coffee, ice cream cone, beer, raspberries, or rice.}
+    \item The set of all even numbers which can be written as the sum of two primes.\sidenote{If you are familiar with Goldbach's conjecture, reward yourself with a coffee, ice cream, beer, raspberries, or rice.}
 \end{itemize}
-Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letters of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another issue: the elements are too hard to list in any meaningful way.\sidenote{We'll get back to this issue near the end of this course.}
+Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letters of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another issue: the elements are too hard to list in any meaningful way.
 
 \paragraph{Give the set a special name.}
 \label{sec:give-set-special}
@@ -588,7 +625,7 @@ Now let's do the sets from earlier. The first one is just the odd prime numbers,
 Some sets come equipped with special names or symbols, and you can just refer to them with these. For example:
 \begin{itemize}
     \item $\R$ means the set of all real numbers.
-    \item $\Z$ means the set of all integers.\sidenote{Number in German is \emph{Zahlen}.}
+    \item $\Z$ means the set of all integers.\marginnote{Numbers in German is \emph{Zahlen}.}
     \item $\N$ means the set of \emph{natural numbers}; that is, $\{1, 2, 3, 4, \dots\}$.
     \item $\Q$ means the set of \emph{rational numbers}; that is, all fractions where numerator and denominator are whole numbers.
     \item $\emptyset$ means the empty set $\{\}$, the set containing nothing.
@@ -607,26 +644,29 @@ In calculus, you also learned interval notation:
 
 The clearest way to list a set is with \emph{set-builder notation}. There are two related versions of this notation. The first is in the form
 \[
-\{ x \text{ of a certain well-understood type} \mid \text{ condition on } x\}.
+\{ x \text{ of a certain well-understood type} \mid \text{condition on } x\}.
 \]
-The vertical bar is read ``such that''.\sidenote{Some texts use a colon instead of a vertical bar.} Some examples:
-\begin{itemize}
+The vertical bar is read ``such that''.\marginnote{Some texts use a colon instead of a vertical bar.} Some examples:
+\begin{enumerate}
     \item $\{x \in \Z \mid x \text{ is even}\}$
     \item $\{x \in \R \mid x > 0 \}$
     \item $\{x \in \R \mid x^2 - 1 = 0\}$
     \item $\{x \in \Z \mid \exists n \in \Z \text{ such that } x = 2n\}$
+    \item $\{x \in \R \mid 3 \leq x < 5\}$
     \item $\{x \in \R \mid \forall y \in \R, x > y\}$
-\end{itemize}
+\end{enumerate}
 What are these sets?\sidenote{In other words, find a more succinct description of these sets.} The way to understand these sets is to take $x$ of the type to the left of the vertical bar and see if the condition on the right is true or not for $x$. If it is true, then $x$ is in the set. If it is false, then $x$ is not in the set. The first example is clear: it is the set of even numbers. We check $x = 2$; since $2$ is even, the condition holds, and $2$ is in the set. We check $x = 5$; since $5$ is not even, the condition does not hold, and $5$ is not in the set.
 
-Similarly, the second example is the set of positive real numbers. The third is the set $\{-1, 1\}$. The fourth uses the existential quantifier, and is in fact also the set of all even numbers.\marginnote{Later, we will show how to prove this. For now, it is enough to figure out what the answer is.} Take $x = 2$. The question is then does there exist an integer $n$ such that $2n = x$, or in other words $2n = 2$? The answer is yes ($n = 1$), so $2$ is in the set. Now try $x = 3$. Does there exist an integer $n$ such that $2n = 3$? The answer is no: only $n = \frac32$ works, but this is not an integer. Therefore $3$ is not in the set. 
+Similarly, the second example is the set of positive real numbers. The third is the set $\{-1, 1\}$. The fourth uses the existential quantifier, and is in fact also the set of all even numbers.\marginnote{Later, we will show how to prove this. For now, it is enough to figure out what the answer is.} Take $x = 2$. The question is then does there exist an integer $n$ such that $2n = x$, or in other words $2n = 2$? The answer is yes ($n = 1$), so $2$ is in the set. Now try $x = 3$. Does there exist an integer $n$ such that $2n = 3$? The answer is no: only $n = \frac32$ works, but this is not an integer. Therefore $3$ is not in the set. The fifth example is the interval $[3,5)$.
 
 The last example is the empty set! Take $x = 1$. Is it true that for every real number $y$, that $x > y$? Of course not---just take $y = 2$! Now try $x = 100$. Is it true that for every real number $y$, that $x > y$? No---now take $y = 101$. The condition is saying that $x$ is bigger than every real number; but we know that there is no such number.\marginnote{For the general case, given any $x$, we can always choose $y = x + 1$, which forces $x < y$.} Therefore the set is empty.
 
 The second version of set-builder notation is
-\[
-\{ \text{algebraic expression which lies in the set} \mid \text{condition that (parts) of the expression must satisfy}\}.
-\]
+\begin{gather*}
+  \{ \text{algebraic expression which lies in the set} \mid \\
+  \qquad \qquad \qquad \text{condition that (parts) of the expression must satisfy}\}.
+\end{gather*}
+
 Examples:
 \begin{itemize}
     \item $\{2n \mid n \in \Z\}$
@@ -635,7 +675,7 @@ Examples:
 \end{itemize}
 The first set is the set of all even integers. We can let $n$ be any integer, so let's try $n = 1$. Then the expression on the left is $2 \cdot 1 = 2$, so $2$ is in the set. We can also let $n = 2$, which makes $2n = 4$, and we see that $4$ is in the set. 
 
-The second set is all integer multiples of $4$ (why?), and the last set is the interval $(1, \infty)$. This last is the squares of all numbers smaller than $-1$; for example, $(-1.5)^2$, $(-2)^2$, $(-10)^2$, and so forth all lie in this set.
+The second set is all integer multiples of $4$ (why?), and the last set is the interval $(1, \infty)$. This last is the set of squares of all numbers smaller than $-1$; for example, $(-1.5)^2$, $(-2)^2$, $(-10)^2$, and so forth all lie in this set.
 
 \subsection{Properties of sets}
 \label{sec:properties-sets}
