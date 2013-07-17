@@ -493,9 +493,14 @@ Is P true or false? Well, it depends on what $n$ is, of course! Statements like 
     \item $P(\frac12)$ makes no sense.\sidenote{In P, $n$ is understood to be an integer. A clearer example might be taking P of a shape, like $P$(triangle) for example.}
 \end{itemize}
 
-  There are three common ways of turning an open statement into a regular statement. One you've already seen: just plug in a value! The second way is using the \emph{universal quantifier}, written $\forall$ or ``for all''.\sidenote{Alternatively: ``for every'' or ``for each''.} Here's an example with our $P(n)$ from above:
+  There are three common ways of turning an open statement into a regular statement. One you've already seen: just plug in a value!
+
+\paragraph{The universal quantifier.}
+\label{sec:univ-quant}
+
+The second way is using the \emph{universal quantifier}, written $\forall$ or ``for all''.\marginnote{The symbol $\forall$ equivalently means ``for every'' or ``for each''.} Here's an example with our $P(n)$ from above:
   \begin{quote}
-    $\forall n \in \Z$, $P(n)$.
+    $\forall$ integers $n$, $P(n)$.
   \end{quote}
   Plain as day, right? Okay, here it is in English:
   \begin{quote}
@@ -505,7 +510,13 @@ Is P true or false? Well, it depends on what $n$ is, of course! Statements like 
   \begin{quote}
     Every integer is prime.
   \end{quote}
-  which is obviously false (take $n = 4$). As one might guess, the quantifier means that no matter what value you plug in for $n$, $P(n)$ should always be true. If you can find even a single exception, the whole sentence ``$\forall n \in \Z, P(n)$'' is false.
+  which is obviously false (take $n = 4$). As one might guess, the quantifier means that no matter what value you plug in for $n$, $P(n)$ should always be true. If you can find even a single exception, the whole sentence ``$\forall$ integers $n, P(n)$'' is false. Here are two more examples:
+  \begin{itemize}
+      \item $\forall$ integers $n, 2n$ is even.
+      \item $\forall$ rectangles $R$, $R$ is a square.
+  \end{itemize}
+  The first one is true: when you multiply any integer by 2, the result is \emph{always} even. The second one is false: it's certainly possible that a given rectangle happens to be a square, but that's not true for \emph{every} rectangle. Thus the statement as a whole is false.
+
 
 
 %%%%%%%%%%%%%%%%%%    Chapter 2    %%%%%%%%%%%%%%%%%%%%
@@ -520,7 +531,7 @@ Is P true or false? Well, it depends on what $n$ is, of course! Statements like 
 A set is essentially\sidenote{Set theory is actually quite complicated, and in certain situations you have to be very careful about what is considered a set. However this is a fairly rare situation.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
 
 \begin{definition}
-  Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$.
+  Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$. Two sets are the equal if they have exactly the same elements.
 \end{definition}
 
 If $S$ is the set of all even integers, we have $2 \in S$, $4 \in S$, $5 \notin S$, and $\text{hot dogs} \notin S$.
