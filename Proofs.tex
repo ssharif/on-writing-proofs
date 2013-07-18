@@ -14,7 +14,7 @@
 \usepackage{dialogue}
 \usepackage{sectsty}
 \allsectionsfont{\sffamily}
-\usepackage{exercise}
+%\usepackage{exercise}
 %\usepackage[pagebackref,colorlinks]{hyperref}
 
 \usepackage{proofspreamble}
@@ -75,7 +75,7 @@ Now let's do Example~\ref{ex:knight-knave-1}.
 
 Notice how we wrote this out: first, the answer under the label ``Claim'', then the explanation with the label ``Proof''. The end of the proof is marked with a box, called a \emph{tombstone}.\sidenote{Because you totally killed the problem.} Proofs are the main subject of this book. You'll notice immediately that the proof is written in complete sentences put together into a paragraph; that is, a proof is a written form, like an essay, and should conform to the usual standards for a properly written essay, including correct spelling and grammar.\marginnote{There are many ingredients to a correctly written mathematical proof. We will discuss these ingredients in detail in the remainder of this book.} Additionally, the proof is written as a formal, logical argument, where each statement is carefully explained. In the problems below, you should write out your answers in the same format as I've done above.
 
-\input{hw1.1}
+\input{hw-knights-knaves}
 
 \section{Conjunctions}
 \label{sec:conjunctions}
@@ -136,7 +136,7 @@ The first three are true, while the last one is false. \marginnote{There is a we
   If Annalee is a \knave, then the first part of her statement is true, which is impossible. Therefore Annalee is a \knight. Since now the first part of her statement is false, the second part must be true. Therefore Bijou is a \knight as well.
 \end{proof}
 
-\input{hw1.2}
+\input{hw-conjunctions}
 
 \section{Conditionals}
 \label{sec:conditionals}
@@ -236,6 +236,7 @@ Now we are ready to do the \knights and \knaves puzzle at the start of this sect
     Ashika's statement is in the form ``If P then Q'', where P is ``Ashika is a \knight'' and Q is ``Burt is a \knave''. If Ashika is a \knave, then P is false. But this makes the conditional true! As \knaves cannot make true statements, we must have that Ashika is a \knight. If Burt is a \knight, then P is true and Q is false, which would make the entire conditional false. Since Ashika's statement is true, this cannot be. Therefore Burt is a \knave.
   \end{proof}
 
+\input{hw-conditionals}
 
 \section{Truth tables}\marginnote{Truth tables are used for clarity when explaining propositional logic, but never appear in properly-written mathematical proofs. Thus if you get confused about what a theorem or problems says, for example, then it's a good idea to write out a truth table for yourself on scratch paper.}
 \label{sec:truth-tables}
@@ -314,7 +315,7 @@ Truth tables can be used for much more complicated situations. For example, say 
 \end{table}
 Notice that in this case, there are $2 \cdot 2 \cdot 2 = 8$ possibilities.\sidenote{There are 2 possibilities for each of P, Q, and R.} Also, we put in a column for ``P or Q'' to help fill in the last column. The first 3 columns come from Table~\ref{tab:truth-table-or}, while the last 3 columns come from Table~\ref{tab:truth-table-conditionals}.
 
-
+\input{hw-truth-tables}
 
 \section{Negation and logical equivalence}
 \label{sec:negat-logic-equiv}
@@ -434,7 +435,7 @@ A common error, in math and in life, is to think that a conditional is equivalen
 
 Notice that in each one of these examples, one of the statements is true, but the other is false.
 
-\input{hw1.5}
+\input{hw-negat-logic-equiv}
 
 \section{Biconditionals}
 \label{sec:biconditionals}
