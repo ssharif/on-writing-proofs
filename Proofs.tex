@@ -622,7 +622,7 @@ There's a major problem with this representation of sets: if there are a lot, ev
     \item $\{2, 4, 6, \dots\}$ is the set of all positive even integers.
     \item $\{\dots, -4, -2, 0, 2, 4, 6, \dots\}$ is the set of all even integers.
 \end{itemize}
-Essentially, the $\dots$ says, ``You know what I mean'', or if you prefer, ``Yadda yadda yadda''.\marginnote{Little-known fact: the ancient Greeks referred to a dot as a \emph{yadda}.}
+Essentially, the $\dots$ says, ``You know what I mean'', or if you prefer, ``Yadda yadda yadda''.
 
 You're probably saying now, ``Wow, writing down sets is so easy! This is going to be a short chapter.'' Okay, smarty-pants---figure out what these sets are:
 \begin{itemize}
@@ -665,7 +665,7 @@ The clearest way to list a set is with \emph{set-builder notation}. There are tw
 \[
 \{ x \text{ of a certain well-understood type} \mid \text{condition on } x\}.
 \]
-The vertical bar is read ``such that''.\marginnote{Some texts use a colon instead of a vertical bar.} Some examples:
+The vertical bar is read ``such that''.\marginnote{Some texts use a colon instead of a vertical bar.} The condition gives a totally explicit test to determine if a given $x$ is in the set or not. Indeed, if you are asked for the \emph{definition} of a set\footnote{You will need to ask yourself this \emph{extremely often}.}, then that means you should look at the set-builder notation, and specifically the condition part of it. Some examples:
 \begin{enumerate}
     \item $\{x \in \Z \mid x \text{ is even}\}$
     \item $\{x \in \R \mid x > 0 \}$
@@ -695,6 +695,28 @@ Examples:
 The first set is the set of all even integers. We can let $n$ be any integer, so let's try $n = 1$. Then the expression on the left is $2 \cdot 1 = 2$, so $2$ is in the set. We can also let $n = 2$, which makes $2n = 4$, and we see that $4$ is in the set. 
 
 The second set is all integer multiples of $4$ (why?), and the last set is the interval $(1, \infty)$. This last is the set of squares of all numbers smaller than $-1$; for example, $(-1.5)^2$, $(-2)^2$, and $(-10)^2$ all lie in this set.
+
+\subsection{The universe}
+\label{sec:universe}
+
+To define the even numbers, one could say
+\[
+\{n \in \Z | n \text{ is even}\}
+\]
+but frequently one just writes
+\[
+\{n | n \text{ is even}\}.
+\]
+Similarly, in calculus, variables almost always represent real numbers, but this is rarely explicitly stated. More generally, the set where most of our basic objects come from in any given context is called the \emph{universe}; in calculus, the universe would be $\R$, and in the even numbers example, the universe would be $\Z$. If the universe is understood, then it is often omitted from the set-builder notation, as in the even numbers example above. Thus, if our universe is the set $U$, then we interpret
+\[
+\{x | P(x)\} 
+\]\marginnote{Here, $P(x)$ is the open statement P applied to $x$.}
+to mean
+\[
+\{x \in U | P(x)\}.
+\]
+If there is any doubt about what the universe is, then the second form should be used.
+
 
 \subsection{Properties of sets}
 \label{sec:properties-sets}
