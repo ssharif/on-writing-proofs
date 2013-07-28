@@ -14,6 +14,7 @@
 \usepackage{dialogue}
 \usepackage{sectsty}
 \allsectionsfont{\sffamily}
+\usepackage{cleveref}
 %\usepackage{exercise}
 %\usepackage[pagebackref,colorlinks]{hyperref}
 
@@ -727,6 +728,10 @@ The cardinality of $\{1, 2, 3\}$ is 3. If $S = \{2, 4, 6, \dots, 20\}$, then $\#
 This means we start with everything in $A$, but then throw out all of those things which happen to be in $B$.
 
 \begin{example}
+  Let $A = \{$chocolate, strawberries, mold, cake, garbage, dirt, ice cream$\}$ and $B = \{\text{mold, garbage, dirt}\}$. Then $A - B$ should be the set consisting of only the yummy things from $A$.
+\end{example}
+
+\begin{example}
   Let $A = \{1, 2, 3\}$, $B = \{3\}$, $C = \{3, 4, 5\}$, and $D = \emptyset$. Then
   \begin{itemize}
       \item $A - B = \{1, 2\}$,
@@ -755,8 +760,28 @@ to mean
 \[
 \{x \in U  \mid  P(x)\}.
 \]
-If there is any doubt about what the universe is, then the second form should be used.
+If there is any doubt about what the universe is, then the second form should be used. Note that if $A$ is a set with universe $U$, then automatically $A \subset U$.
 
+\begin{definition}
+  Let $A$ be a set with universe $U$. Then the \emph{complement} of $A$ is $U - A$. It is written $A^c$.
+\end{definition}
+
+If $E$ is the set of even integers, then we usually take $U = \Z$, from which $E^c$ is the set of odd integers.
+
+\begin{proposition}\label{prop:complements}
+  Let $A$ be a set with universe $U$. Then
+  \begin{enumerate}[(a)]
+      \item $A \cap A^c = \emptyset$.
+      \item $A \cup A^c = U$.
+      \item $(A^c)^c = A$.
+      \item $\emptyset^c = U$.
+      \item $U^c = \emptyset$.
+  \end{enumerate}
+\end{proposition}
+
+The proof is left as an exercise.
+
+\input{hw-complements}
 
 \section{Power set}
 \label{sec:power-set}
