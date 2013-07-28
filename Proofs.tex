@@ -696,27 +696,6 @@ The first set is the set of all even integers. We can let $n$ be any integer, so
 
 The second set is all integer multiples of $4$ (why?), and the last set is the interval $(1, \infty)$. This last is the set of squares of all numbers smaller than $-1$; for example, $(-1.5)^2$, $(-2)^2$, and $(-10)^2$ all lie in this set.
 
-\subsection{The universe}
-\label{sec:universe}
-
-To define the even numbers, one could say
-\[
-\{n \in \Z | n \text{ is even}\}
-\]
-but frequently one just writes
-\[
-\{n | n \text{ is even}\}.
-\]
-Similarly, in calculus, variables almost always represent real numbers, but this is rarely explicitly stated. More generally, the set where most of our basic objects come from in any given context is called the \emph{universe}; in calculus, the universe would be $\R$, and in the even numbers example, the universe would be $\Z$. If the universe is understood, then it is often omitted from the set-builder notation, as in the even numbers example above. Thus, if our universe is the set $U$, then we interpret
-\[
-\{x | P(x)\} 
-\]\marginnote{Here, $P(x)$ is the open statement P applied to $x$.}
-to mean
-\[
-\{x \in U | P(x)\}.
-\]
-If there is any doubt about what the universe is, then the second form should be used.
-
 
 \subsection{Cardinality}
 \label{sec:cardinality}
@@ -727,26 +706,64 @@ If there is any doubt about what the universe is, then the second form should be
 
 The cardinality of $\{1, 2, 3\}$ is 3. If $S = \{2, 4, 6, \dots, 20\}$, then $\# S = 10$. If $S = \emptyset$, then $\# S = 0$. Note that cardinality is always a nonnegative integer. \marginnote{There is such a thing as infinite cardinalities; we will discuss some basic concepts in the theory later in this course.}
 
-\subsection{Subsets and set equality}
-\label{sec:subsets}
+\section{Sets and set equality}
+\label{sec:sets}
 
 
-\subsection{Product, union, and intersection}
+\section{Product, union, and intersection}
 \label{sec:prod-union-inters}
 
 
 
-\subsection{Complements and set difference}
+\section{Complements and set difference}
 \label{sec:compl-set-diff}
 
+\begin{definition}
+  If $A$ and $B$ are sets, then the \emph{set difference} $A - B$ is \marginnote{Some texts use the notation $A \setminus B$.}
+  \[
+  \{x \mid x \in A \text{ and } x \notin B\}.
+  \]
+\end{definition}
+This means we start with everything in $A$, but then throw out all of those things which happen to be in $B$.
+
+\begin{example}
+  Let $A = \{1, 2, 3\}$, $B = \{3\}$, $C = \{3, 4, 5\}$, and $D = \emptyset$. Then
+  \begin{itemize}
+      \item $A - B = \{1, 2\}$,
+      \item $A - C = \{1, 2\}$, and
+      \item $A - D = \{1, 2, 3\}$.
+  \end{itemize}
+  Notice that in $A - C$, the elements $4$ and $5$ play no role! Neither is in $A$ to begin with, and so we never have to throw them out.
+\end{example}
+
+\subsection{The universe}
+\label{sec:universe}
+
+To define the even numbers, one could say
+\[
+\{n \in \Z  \mid  n \text{ is even}\}
+\]
+but frequently one just writes
+\[
+\{n  \mid  n \text{ is even}\}.
+\]
+Similarly, in calculus, variables almost always represent real numbers, but this is rarely explicitly stated. More generally, the set where most of our basic objects come from in any given context is called the \emph{universe}; in calculus, the universe would be $\R$, and in the even numbers example, the universe would be $\Z$. If the universe is understood, then it is often omitted from the set-builder notation, as in the even numbers example above. Thus, if our universe is the set $U$, then we interpret
+\[
+\{x  \mid  P(x)\} 
+\]\marginnote{Here, $P(x)$ is the open statement P applied to $x$.}
+to mean
+\[
+\{x \in U  \mid  P(x)\}.
+\]
+If there is any doubt about what the universe is, then the second form should be used.
 
 
-\subsection{Power set}
+\section{Power set}
 \label{sec:power-set}
 
 
 
-\subsection{Indexed sets}
+\section{Indexed sets}
 \label{sec:indexed-sets}
 
 
