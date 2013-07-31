@@ -727,6 +727,7 @@ Given a set $B$, the empty set $\emptyset$ is \emph{always} a subset of $B$. Als
 
 As examples, take ???
 
+Frequently you will need to show that one set is a subset of another. How do you do this? In this course\sidenote{And in mathematics more generally.}, the answer to that kind of question is \emph{almost always} contained in the definition. We will do an example in the next section.
 
 \section{Product, union, and intersection}
 \label{sec:prod-union-inters}
@@ -743,6 +744,23 @@ A \times B = \{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\}.
 \]
 Note that $\#(A \times B) = 6$.
 
+Recall that in the previous section we discussed proving one set is a subset of another. We now give an example.
+\begin{proposition}
+  Let $A$ and $B$ be sets. Then $A \subset A \cup B$.
+\end{proposition}
+
+\begin{proof}
+  According to the definition of subset, we must show that for every $a \in A$, that $a \in A \cup B$. We do this now. Suppose we are given some $a \in A$. To show that $a \in A \cup B$, by definition of union we need to show that $a \in A$ or $a \in B$. But we know that $a \in A$, hence $a \in A \cup B$.
+\end{proof}
+
+Here's a slightly harder one:
+\begin{proposition}
+  Suppose $A, B, C$ are sets and that $A \subset B$. Then $A \subset B \cup C$.
+\end{proposition}
+
+\begin{proof}
+  Suppose that $a \in A$. Since $A \subset B$, by definition of subset we see that $a \in B$ as well. By the previous proposition, we conclude that $a \in B \cup C$. Since this reasoning holds for every $a \in A$, by definition of subset $A \subset B \cup C$.
+\end{proof}
 
 
 \section{Complements and set difference}
