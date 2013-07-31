@@ -715,12 +715,33 @@ The second set is all integer multiples of $4$ (why?), and the last set is the i
 
 The cardinality of $\{1, 2, 3\}$ is 3. If $S = \{2, 4, 6, \dots, 20\}$, then $\# S = 10$. If $S = \emptyset$, then $\# S = 0$. Note that cardinality is always a nonnegative integer. \marginnote{There is such a thing as infinite cardinalities; we will discuss some basic concepts in the theory later in this course.}
 
-\section{Sets and set equality}
-\label{sec:sets}
+\section{Subsets and set equality}
+\label{sec:subsets}
+
+\begin{definition}
+  Given two sets $A$ and $B$, we say that $A$ is a \emph{subset} \marginnote{Learn this definition. Memorize it if you have to. Otherwise you will be unable to do any problems requiring you to prove that one set is a subset of another.} of $B$ if for every $a \in A$, we have $a \in B$. In this case, we write $A \subset B$. 
+\end{definition}
+One way of thinking of subsets is one takes some of the elements of $B$, but not necessarily all, and uses only these elements to make $A$.
+
+Given a set $B$, the empty set $\emptyset$ is \emph{always} a subset of $B$. Also, $B$ itself is a subset of $B$.\sidenote{Some texts use $A \subseteq B$ to mean $A$ is a subset of $B$, and reserve $A \subset B$ to mean that $A$ is a subset of $B$, but is not allowed to be $B$ itself. That is, $A$ must be strictly smaller than $B$.} Thus, most sets have at least two subsets.
+
+As examples, take ???
 
 
 \section{Product, union, and intersection}
 \label{sec:prod-union-inters}
+
+\begin{definition}
+  Given sets $A$ and $B$, the \emph{Cartesian product} $A \times B$ is the set of all ordered pairs $(a, b)$ where $a \in A$ and $b \in B$. Symbolically,
+  \[
+  A \times B = \{(a,b) \mid a \in A \text{ and } b \in B\}.
+  \]
+\end{definition}
+For example, if $A = \{1, 2\}$ and $B = \{x, y, z\}$, then
+\[
+A \times B = \{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\}.
+\]
+Note that $\#(A \times B) = 6$.
 
 
 
