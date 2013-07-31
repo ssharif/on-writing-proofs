@@ -55,6 +55,10 @@ A certain island in the middle of the Pacific Ocean is inhabited by two types of
 
 The question is, who is a \knight and who is a \knave? Take a moment to solve this problem.
 
+\begin{center}
+{\Large\Clocklogo}
+\end{center}
+
 The next few sections contain problems of this sort; that is, a number of inhabitants make a number of statements, and based on these statements, you must deduce something, usually who is a \knight and who is a \knave. There is always a straightforward way of approaching these problems: try every possibility! In the above example, Azog can be a \knight or a \knave, Bartholomew can be a \knight or a \knave, and Cynthia can be a \knight or a \knave, giving $2 \cdot 2 \cdot 2 = 8$ possibilities total.\sidenote{A common error is to think that there are 6 possibilities total. If you thought so, then you should list them all out.} Most of these possibilities will make no sense, as you'd end up having a \knight making a false statement or a \knave making a true statement. As a simple example, consider the puzzle
 
 \begin{dialogue}
@@ -329,7 +333,7 @@ One way to think of negation is that if a \knave says P, then a \knight would sa
 \begin{definition}
   Two statements are \emph{logically equivalent} \marginnote{Two statements can be equivalent without being logically equivalent. For example, ``The integer $n$ is an even prime'' and ``The integer $n$ equals 2'' are equivalent, but not logically equivalent. Why? The reason the two statements are equivalent facts about $n$ is that $2$ is the only even prime. This is a \emph{mathematical} fact. Logical equivalence means the two statements are the same \emph{without using external reasons}. You can think of logical equivalence as just restating a sentence.} if their truth values are the same, regardless of the truth values of their constituent clauses. 
 \end{definition}
-For example, if we rephrase a complex statement in a simpler form, then we say the two forms are equivalent. 
+For example, if we rephrase a complex statement in a simpler form, then we say the two forms are logically equivalent. 
 
 \begin{example}
   Consider the two statements below:
@@ -396,7 +400,7 @@ As you might have guessed from these three examples, we have the following:
   Suppose our conditional is ``If P then Q''. This conditional is true \emph{unless} P is true and Q is false. Now consider the contrapositive ``If not Q then not P''. The latter is true \emph{unless} not Q is true and not P is false. But not Q is true is the same as saying Q is false, and not P is false is the same as saying P is true. Therefore the contrapositive is true except in the case where P is true and Q is false. As this is identical to the truth value of the original conditional, we see that the theorem holds.
 \end{proof}
 
-\begin{proof}[Alternate proof] \marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}
+\begin{proof}[Alternate proof] 
   We construct a truth table to compare ``If P then Q'' with ``If not Q then not P'', and see that they have the same truth values in all cases. The claim follows.
 
 \marginnote{The symbol $\To$ is often used to mean ``implies''.}
@@ -413,7 +417,7 @@ As you might have guessed from these three examples, we have the following:
     \end{tabular}
     \caption{Conditional and contrapositive}
     \label{tab:conditional-contrapositive}
-  \end{table}
+  \end{table}\marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}
 \end{proof}
 
 Another important fact, which will come up again when we talk about counterexamples, is the following:
@@ -527,7 +531,7 @@ is understood to mean
 \begin{quote}
   For all integers $n$, if $n$ is prime, then $n$ is odd.
 \end{quote}
-The first sentence \emph{could be} viewed as true if, say, we knew that $n = 3$. However, since the ``for all'' part is understood, the statement is false, since $n = 2$ is a prime which is not odd.
+The first sentence \emph{could be} viewed as true if, say, we knew that $n = 3$. However, since the ``for all'' part is understood, the statement is false, since $n = 2$ is a prime which is not odd. \marginnote{This invisible universal quantifier is why in practice, true conditionals \emph{do} give a causal relationship.}
 
 
 \paragraph{The existential quantifier.}
@@ -535,7 +539,11 @@ The first sentence \emph{could be} viewed as true if, say, we knew that $n = 3$.
 
 A third method is to use an \emph{existential quantifier}. We use the symbol $\exists$, which means ``there exists''. The construction looks like
 \begin{quote}
-  $\exists n$ such that $P(n)$. \marginnote{``There exists'' always pairs with ``such that''.}
+  $\exists n$ such that $P(n)$. \marginnote{``There exists'' is \emph{always} followed by either ``such that'' or ``for which''; they both mean the same thing. A logically equivalent construction is ``$P(n)$ for some $n$.'' Never just say ``There exists $n$.''}
+\end{quote}
+or
+\begin{quote}
+  $\exists n$ for which $P(n)$.
 \end{quote}
 The statement is true if there is \emph{at least one} $n$ for which the condition $P(n)$ holds. For example,
 \begin{itemize}
@@ -561,7 +569,7 @@ Notice that to make a universally quantified ($\forall$) statement false, we jus
 \section{Logical deduction}
 \label{sec:logical-deduction}
 
-Logical deduction is the process of putting together a number of statements which are known to be true to deduce new true statements. All logical arguments, not just mathematical ones, ideally start from some \emph{premises},\marginnote[-1cm]{One of the amazing things about mathematics is that, compared to every other subject, there are extremely few premises. In fact, mathematicians have written down the premises for the entire subject of mathematics; these premises are often called \emph{axioms}. Axioms come in groups, depending on the subject matter: Euclid's axioms for plane geometry, for example, or the Zermelo-Frenkel-Cantor axioms for set theory. Note however that axioms are not set in stone; they have evolved, and continue to evolve, based on debates within the mathematical community.} or things which are assumed to be true, and proceed via logical deduction to \emph{conclusions}. There are certain rules for logical deduction; one is that if we know the statements
+Logical deduction is the process of putting together a number of statements which are known to be true to deduce new true statements. All logical arguments, not just mathematical ones, ideally start from some \emph{premises},\marginnote[-1cm]{One of the amazing things about mathematics is that, compared to every other subject, there are extremely few premises. In fact, mathematicians have written down the premises for the entire subject of mathematics; these premises are often called \emph{axioms}. Axioms come in groups, depending on the subject matter: Euclid's axioms for plane geometry, for example, or the Zermelo-Fraenkel-Cantor axioms for set theory. Note however that axioms are not set in stone; they have evolved, and continue to evolve, based on debates within the mathematical community.} or things which are assumed to be true, and proceed via logical deduction to \emph{conclusions}. There are certain rules for logical deduction; one is that if we know the statements
 \begin{quote}
   If P then Q.
 \end{quote}
