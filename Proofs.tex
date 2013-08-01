@@ -377,55 +377,73 @@ These two examples are a special case of a general law:
   As this covers all possible truth values for P and Q, the statements must be equivalent.
 \end{proof}
 
-There are two more equivalences which come up quite frequently, both involving conditionals.
-
-\begin{definition}
-  The \emph{contrapositive} of the conditional ``If P then Q'' is the conditional ``If not Q then not P.''
-\end{definition}
-
-\begin{example}
-  \begin{itemize}
-      \item The contrapositive of ``If $n$ is a perfect square, then $n$ is not prime'' is ``If $n$ is prime, then $n$ is not a perfect square.''
-      \item The contrapositive of ``If the shape is a square, then it is a rectangle'' is ``If the shape is not a rectangle, then it is not a square.''
-      \item The contrapositive of ``If it is raining, then the grass is wet'' is ``If the grass is dry, then it is not raining.''
-  \end{itemize}
-\end{example}
-
-As you might have guessed from these three examples, we have the following:
-\begin{theorem}
-  A conditional is equivalent to its contrapositive.
-\end{theorem}
-
-\begin{proof}
-  Suppose our conditional is ``If P then Q''. This conditional is true \emph{unless} P is true and Q is false. Now consider the contrapositive ``If not Q then not P''. The latter is true \emph{unless} not Q is true and not P is false. But not Q is true is the same as saying Q is false, and not P is false is the same as saying P is true. Therefore the contrapositive is true except in the case where P is true and Q is false. As this is identical to the truth value of the original conditional, we see that the theorem holds.
-\end{proof}
-
-\begin{proof}[Alternate proof] 
-  We construct a truth table to compare ``If P then Q'' with ``If not Q then not P'', and see that they have the same truth values in all cases. The claim follows.
-
-\marginnote{The symbol $\To$ is often used to mean ``implies''.}
+\begin{proof}[Alternate proof of part (a)]
+  We construct a truth table, \Cref{tab:demorgan-a}, to compare ``Not P and not Q'' with ``Not `P or Q'~'', and see that they have the same truth values in all cases. The claim follows.
   \begin{table}
     \centering
-    \begin{tabular}{cccccc}
+    \begin{tabular}{ccccccc}
       \toprule
-      P & Q & $\neg$ Q & $\neg$ P & P $\To$ Q & $\neg$ P $\To$ $\neg$ Q \\ \midrule 
-      T & T & F & F & T & T \\
-      T & F & T & F & F & F \\
-      F & T & F & T & T & T \\
-      F & F & T & T & T & T \\
+      P & Q & $\neg$ P & $\neg$ Q & P or Q & $\neg$ P and $\neg$ Q & Not (P or Q) \\ \midrule 
+      T & T & F & F & T & F & F\\
+      T & F & F & T & T & F & F\\
+      F & T & T & F & T & F & F\\
+      F & F & T & T & F & T & T\\
       \bottomrule
     \end{tabular}
-    \caption{Conditional and contrapositive}
-    \label{tab:conditional-contrapositive}
-  \end{table}\marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}
+    \caption{DeMorgan's Law, part (a)}
+    \label{tab:demorgan-a}
+  \end{table}\marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}  
 \end{proof}
 
-Another important fact, which will come up again when we talk about counterexamples, is the following:
-\begin{theorem}\label{thm:negation-conditional}
-  The negation of ``If P then Q'' is ``Q and not P''.
-\end{theorem}
+% There are two more equivalences which come up quite frequently, both involving conditionals.
 
-Notice that the negation is an and statement, not another conditional! The proof of this theorem is left as an exercise.
+% \begin{definition}
+%   The \emph{contrapositive} of the conditional ``If P then Q'' is the conditional ``If not Q then not P.''
+% \end{definition}
+
+% \begin{example}
+%   \begin{itemize}
+%       \item The contrapositive of ``If $n$ is a perfect square, then $n$ is not prime'' is ``If $n$ is prime, then $n$ is not a perfect square.''
+%       \item The contrapositive of ``If the shape is a square, then it is a rectangle'' is ``If the shape is not a rectangle, then it is not a square.''
+%       \item The contrapositive of ``If it is raining, then the grass is wet'' is ``If the grass is dry, then it is not raining.''
+%   \end{itemize}
+% \end{example}
+
+% As you might have guessed from these three examples, we have the following:
+% \begin{theorem}
+%   A conditional is equivalent to its contrapositive.
+% \end{theorem}
+
+% \begin{proof}
+%   Suppose our conditional is ``If P then Q''. This conditional is true \emph{unless} P is true and Q is false. Now consider the contrapositive ``If not Q then not P''. The latter is true \emph{unless} not Q is true and not P is false. But not Q is true is the same as saying Q is false, and not P is false is the same as saying P is true. Therefore the contrapositive is true except in the case where P is true and Q is false. As this is identical to the truth value of the original conditional, we see that the theorem holds.
+% \end{proof}
+
+% \begin{proof}[Alternate proof] 
+%   We construct a truth table to compare ``If P then Q'' with ``If not Q then not P'', and see that they have the same truth values in all cases. The claim follows.
+
+% \marginnote{The symbol $\To$ is often used to mean ``implies''.}
+%   \begin{table}
+%     \centering
+%     \begin{tabular}{cccccc}
+%       \toprule
+%       P & Q & $\neg$ Q & $\neg$ P & P $\To$ Q & $\neg$ P $\To$ $\neg$ Q \\ \midrule 
+%       T & T & F & F & T & T \\
+%       T & F & T & F & F & F \\
+%       F & T & F & T & T & T \\
+%       F & F & T & T & T & T \\
+%       \bottomrule
+%     \end{tabular}
+%     \caption{Conditional and contrapositive}
+%     \label{tab:conditional-contrapositive}
+%   \end{table}\marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}
+% \end{proof}
+
+% Another important fact, which will come up again when we talk about counterexamples, is the following:
+% \begin{theorem}\label{thm:negation-conditional}
+%   The negation of ``If P then Q'' is ``Q and not P''.
+% \end{theorem}
+
+% Notice that the negation is an and statement, not another conditional! The proof of this theorem is left as an exercise.
 
 \begin{definition}
   The \emph{converse} of the conditional ``If P then Q'' is the conditional ``If Q then P''.
