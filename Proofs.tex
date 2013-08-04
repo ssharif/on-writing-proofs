@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{marvosym}
-%\usepackage{mathrsfs}
+\usepackage{mathrsfs}
 \usepackage[all]{xy}
 \usepackage{enumerate}
 \usepackage{booktabs}
@@ -853,12 +853,37 @@ The proof is left as an exercise.
 \section{Power set}
 \label{sec:power-set}
 
+\begin{definition}
+  Let $S$ be a set. The \emph{power set} of $S$, written $\sP(S)$, \marginnote{Some texts use the notation $2^S$ for the power set. There is a more general notation $B^A$, which means the set of functions from $A$ to $B$.} is the set of all subsets of $S$.
+\end{definition}
+If $S = \emptyset$, then $\sP(S) = \{\emptyset\}$. Note that $S \neq \sP(S)$---while $S$ is the empty set, $\sP(S)$ is the set containing the empty set. To see the difference, observe that $\# S = 0$ but $\# \sP(S) = 1$.
+
+If $S \neq \emptyset$, then $\sP(S)$ always contains the two elements $\emptyset$ and $S$ itself. Here are some simple examples:
+\begin{itemize}
+    \item If $S = \{a\}$, then $\sP(S) = \{\emptyset, \{a\}\}$.
+    \item If $S = \{a, b\}$, then $\sP(S) = \{\emptyset, \{a\}, \{b\}, \{a, b\}\}$. Note that $a \notin \sP(S)$; rather, $\{a\} \in \sP(S)$.
+    \item If $S = \{a, b, c\}$, then $\sP(S)$ is
+  \[
+  \begin{array}{cccc}
+    \{\emptyset, & \{a\}, & \{b\}, & \{a, b\}, \\
+    \{c\}, & \{a, c\}, & \{b, c\}, & \{a, b, c\}\}.
+  \end{array}
+  \]
+\end{itemize}
+
+\begin{proposition}
+  Suppose $S$ is a finite set. Then $\# \sP(S) = 2^{\# S}$.
+\end{proposition}
+
+\begin{proof}
+  Suppose $\# S = n$, and $S = \{x_1, x_2, \dots, x_n\}$. Given a subset $U \subset S$, we ask $n$ questions about it: is $x_1$ in $U$, is $x_2$ in $U$, \dots, is $x_n$ in $U$? Notice that the answers to these questions uniquely determines $U$.\sidenote{``Uniquely determines'' means that knowing the answers to these questions is identical to knowing $U$ itself. Note that if all the answers are ``no'', then $U = \emptyset$.} As each question has exactly two possible answers, there are $2 \cdot 2 \cdot \cdots \cdot 2 = 2^n$ possible sequences of answers to all $n$ questions. Therefore, there are exactly $2^n$ possible subsets $U$.
+\end{proof}
 
 
 \section{Indexed sets}
 \label{sec:indexed-sets}
 
-
+Suppose we have a bunch of different sets we want to study. If there are three, we could name them $A$, $B$, and $C$ (for example). What if there are 10? One could conceivably call them $A$, $B$, $C$, \dots, up until the 10th letter of the alphabet.\sidenote{Quick: what is it?} But of course it's easier to name them, for example, $A_1$, $A_2$, \dots, $A_{10}$. 
 
 
 
