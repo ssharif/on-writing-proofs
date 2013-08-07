@@ -746,7 +746,7 @@ Given a set $B$, the empty set $\emptyset$ is \emph{always} a subset of $B$. Als
 
 As examples, take ???
 
-Frequently you will need to show that one set is a subset of another. How do you do this? In this course\sidenote{And in mathematics more generally.}, the answer to that kind of question is \emph{almost always} contained in the definition. We will do an example in the next section.
+Frequently you will need to show that one set is a subset of another. How do you do this? In this course\sidenote{And in mathematics more generally.}, the answer to that kind of question is \emph{almost always} contained in the definitions of the two sets. We will do an example in the next section.
 
 We mentioned before that two sets are equal if they consist of exactly the same elements. In practice, we use the following proposition to prove set equality.
 \begin{proposition}
@@ -756,6 +756,8 @@ We mentioned before that two sets are equal if they consist of exactly the same 
 \begin{proof}
   Recall that the only way for two sets to be unequal is if there is some element in one set which is not in the other. If there is some $x \in A$ but $x \notin B$, then we'd conclude that $A \not\subset B$ by definition of subset---but we in fact are given that $A \subset B$! Similarly if we had some $x \in B$ but $x \notin A$, then we'd have $B \not\subset A$, which is contrary to our assumption that $B \subset A$. Therefore $A = B$.
 \end{proof}
+
+\input{hw-subset}
 
 \section{Product, union, and intersection}
 \label{sec:prod-union-inters}
