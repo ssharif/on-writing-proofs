@@ -770,7 +770,11 @@ For example, if $A = \{1, 2\}$ and $B = \{x, y, z\}$, then
 \[
 A \times B = \{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\}.
 \]
-Note that $\#(A \times B) = 6$.
+Note that $\#(A \times B) = 6$. Also,
+\[
+B \times A = \{(x, 1), (y, 1), (z, 1), (x, 2), (y, 2), (z, 2)\}.
+\]
+Thus, $A \times B \neq B \times A$.
 
 If there are more than two sets, say $n$ sets, we can define the Cartesian product to be the set of $n$-tuples\sidenote{A \emph{tuple} is a finite ordered list. Unlike sets, order and repetition matter for tuples. An $n$-tuple is a list of length $n$. You'll note that 2-tuples are called \emph{pairs}, $3$-tuples \emph{triples}, and so forth.}, where each entry in each tuple comes from the corresponding set. For example, if $n = 3$ and we have three sets $A$, $B$, $C$, then
 \[
@@ -797,6 +801,15 @@ Lastly, if the sets in a Cartesian product are all the same, then we often use e
   \end{center}
 
 \end{example}
+
+\begin{definition}
+  Let $A$ and $B$ be sets. The \emph{union} of $A$ and $B$ is the set
+  \[
+  \{x \mid x \in A \text{ or } x \in B\}.
+  \]
+  It is written $A \cup B$.
+\end{definition}
+For example, if $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A \cup B = \{1, 2, 3, 4, 5\}$. Just as with Cartesian product, we can take the union of multiple sets: $A \cup B \cup C$ for example.
 
 Recall that in the previous section we discussed proving one set is a subset of another. We now give an example.
 \begin{proposition}
