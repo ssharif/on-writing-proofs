@@ -2,6 +2,7 @@
 %\documentclass[letterpaper]{scrbook}
 \hypersetup{colorlinks}
 \usepackage{amsmath, amsthm, amssymb}
+\usepackage{pgfplots}
 \usepackage{mathpazo}
 \usepackage[T1]{fontenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
@@ -770,6 +771,32 @@ For example, if $A = \{1, 2\}$ and $B = \{x, y, z\}$, then
 A \times B = \{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\}.
 \]
 Note that $\#(A \times B) = 6$.
+
+If there are more than two sets, say $n$ sets, we can define the Cartesian product to be the set of $n$-tuples\sidenote{A \emph{tuple} is a finite ordered list. Unlike sets, order and repetition matter for tuples. An $n$-tuple is a list of length $n$. You'll note that 2-tuples are called \emph{pairs}, $3$-tuples \emph{triples}, and so forth.}, where each entry in each tuple comes from the corresponding set. For example, if $n = 3$ and we have three sets $A$, $B$, $C$, then
+\[
+A \times B \times C = \{(a, b, c) \mid a \in A, b \in B, \text{ and } c \in C\}.
+\]
+Note that $A \times B \times C$, $A \times (B \times C)$, and $(A \times B) \times C$ are \emph{not} the same set! The first consists of ordered triples. The second consists of ordered pairs of the form $(a, (b, c))$---that is, the first entry in the ordered pair is an element of $A$, and the second entry is an element of $B \times C$.\sidenote{Now describe elements of the third product yourself.}
+
+Lastly, if the sets in a Cartesian product are all the same, then we often use exponential notation. For example, $A \times A$ would be written $A^2$, and $A \times A \times A$ would be written $A^3$.
+
+\begin{example}
+  The set $\R$ can be represented graphically as the number line. The set $\R^2 = \R \times \R$ is the set of ordered pairs $(x, y)$ of real numbers; it can be represented graphically as the coordinate plane. In high school algebra, you learned how to graph functions. Really, it turns out, you are graphically representing sets. For example, the set
+  \[
+  L = \{(x,y) \in \R^2 \mid y = x + 1\}
+  \]
+  is a subset of $\R^2$ which can be represented by the picture below.
+    \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[ axis x line=middle, axis y line=middle,
+        xmax=3, xmin=-3,
+        ymax=3, ymin=-3]
+        \addplot[smooth, blue] {x+1};
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+
+\end{example}
 
 Recall that in the previous section we discussed proving one set is a subset of another. We now give an example.
 \begin{proposition}
