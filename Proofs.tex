@@ -811,7 +811,27 @@ Lastly, if the sets in a Cartesian product are all the same, then we often use e
   \]
   It is written $A \cup B$.
 \end{definition}
-For example, if $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A \cup B = \{1, 2, 3, 4, 5\}$. Just as with Cartesian product, we can take the union of multiple sets: $A \cup B \cup C$ for example.
+For example, if $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A \cup B = \{1, 2, 3, 4, 5\}$. Just as with Cartesian product, we can take the union of multiple sets: $A \cup B \cup C$ for example. 
+
+\begin{example}
+  Let $A = \{(\frac12, \frac12)\}$, $B = \{(-\frac12, \frac12)\}$, and $C = \{(x, y) \mid y = -\sqrt{1-x^2}\}$. Since $A, B, C \subset \R^2$, we can graph these sets. In particular, the set $A \cup B \cup C$ is drawn below.
+    \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[ axis x line=middle, axis y line=middle,
+        xmax=1, xmin=-1,
+        ymax=1, ymin=-1]
+        \addplot[smooth, blue] {-(1-x^2)^(0.5)};
+        \addplot[blue] coordinates {
+          (0.5, 0.5)
+          };
+        \addplot[blue] coordinates {
+          (-0.5, 0.5)
+          };
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+
+\end{example}
 
 Recall that in the previous section we discussed proving one set is a subset of another. We now give an example.
 \begin{proposition}
