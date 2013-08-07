@@ -814,19 +814,25 @@ Lastly, if the sets in a Cartesian product are all the same, then we often use e
 For example, if $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A \cup B = \{1, 2, 3, 4, 5\}$. Just as with Cartesian product, we can take the union of multiple sets: $A \cup B \cup C$ for example. 
 
 \begin{example}
-  Let $A = \{(\frac12, \frac12)\}$, $B = \{(-\frac12, \frac12)\}$, and $C = \{(x, y) \mid y = -\sqrt{1-x^2}\}$. Since $A, B, C \subset \R^2$, we can graph these sets. In particular, the set $A \cup B \cup C$ is drawn below.
+  Let 
+
+\begin{align*}
+A &= \bigg\{(x, 1) \mid x^2 - \frac14 = 0\bigg\},\\
+B &= \{(x, y) \mid y = -\sqrt{1-x^2}\}, \text{ and}\\
+C &= \bigg\{\bigg(\cos t, \frac12 \sin t\bigg) \bigg| -\pi \leq t \leq 0\bigg\}.
+\end{align*}
+Since $A, B, C \subset \R^2$, we can graph these sets. In particular, the set $A \cup B \cup C$ is drawn below.
     \begin{center}
     \begin{tikzpicture}
       \begin{axis}[ axis x line=middle, axis y line=middle,
-        xmax=1, xmin=-1,
-        ymax=1, ymin=-1]
-        \addplot[smooth, blue] {-(1-x^2)^(0.5)};
-        \addplot[blue] coordinates {
-          (0.5, 0.5)
-          };
-        \addplot[blue] coordinates {
-          (-0.5, 0.5)
-          };
+        xmax=2, xmin=-2,
+        ymax=2, ymin=-2]
+        \addplot[thick, color=blue, smooth, domain=-pi:0] ({cos(deg(\x))},{sin(deg(\x))});
+        \addplot[thick, color=blue, smooth, domain=-pi:0] ({cos(deg(\x))},{0.5*sin(deg(\x))});
+        \addplot[only marks, mark=*, blue] coordinates {
+          (0.5, 1)
+          (-0.5, 1)
+        };
       \end{axis}
     \end{tikzpicture}
   \end{center}
