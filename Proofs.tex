@@ -364,7 +364,7 @@ For example, if we rephrase a complex statement in a simpler form, then we say t
 \end{example}
 
 These two examples are a special case of a general law:
-\begin{theorem}[DeMorgan's Laws]
+\begin{theorem}[DeMorgan's Laws] \marginnote{Major mathematical results are called \emph{theorems}. Slightly less important ones are called \emph{propositions}.}
   Suppose P and Q are statements.
   \begin{enumerate}[(a)]
       \item ``Not P and not Q'' is equivalent to ``Not `P or Q'~''.
@@ -962,8 +962,33 @@ If $S \neq \emptyset$, then $\sP(S)$ always contains the two elements $\emptyset
 \section{Indexed sets}
 \label{sec:indexed-sets}
 
-Suppose we have a bunch of different sets we want to study. If there are three, we could name them $A$, $B$, and $C$ (for example). What if there are 10? One could conceivably call them $A$, $B$, $C$, \dots, up until the 10th letter of the alphabet.\sidenote{Quick: what is it?} But of course it's easier to name them, for example, $A_1$, $A_2$, \dots, $A_{10}$. 
+Suppose we have a bunch of different sets we want to study. If there are three, we could name them $A$, $B$, and $C$ (for example). What if there are 10? One could conceivably call them $A$, $B$, $C$, \dots, up until the 10th letter of the alphabet. But of course it's easier to name them, for example, $A_1$, $A_2$, \dots, $A_{10}$. The subscripts are often called \emph{indices}, or in the singular an \emph{index}. In this case, the indices are $n \in \N, 1 \leq n \leq 10$, or more simply $n = 1, 2, \dots, 10$.
 
+But this is mathematics! Why stop at $10$? Let's take the following example. A real-valued function $f(x)$ is said to be \emph{bounded} if there exists some real number $L$ such that $|f(x)|$ never exceeds $L$. Any constant function is bounded, as are $\sin x$, $\cos x$, and $e^{-x^2}$.
+
+Given $M \in \N$, let 
+\[
+F_M = \{f(x) \mid f \text{ is a real-valued function and } |f(x)| \leq M \text{ for every } x\}.
+\]
+For example, $3\sin x \in F_3$, but $3\sin x \notin F_2$. Let $B = $ the set of all bounded functions. In other words,
+\[
+B = \{f(x) \mid f \text{ is a real valued function and } \exists L \in \R \text{ such that } |f(x)| \leq L \, \, \forall x\}.
+\]
+
+\begin{claim}
+  With $B$ and $F_M$ as above, $B = \cup_{M \in \N} F_M$.
+\end{claim}
+Notice that we're taking the union of infinitely many sets! The definition is the same as for two sets: $f \in \cup F_M$ means $f$ is in one of the $F_M$s, and vice versa.
+
+The idea of the proof is that in order for a function to be bounded, it is in fact bounded by some integer $M$. But this means that the function is in $F_M$ for that particular value of $M$. \marginnote{Note that we need \emph{all} of the $F_M$, since $N \sin x \notin F_M$ whenever $N > M$.}
+
+\begin{proof}
+  We need to show that $\cup_{M \in \N} F_M \subset B$ and that $B \subset \cup_{M \in \N} F_M$. For the first containment, suppose $f(x) \in \cup F_M$. By definition of union, this means that $f(x)$ is in one of the $F_M$, say $F_{M_0}$. \marginnote{Notice that in order to write this proof, you need to know lots of definitions, and know them precisely!} By definition of $F_{M_0}$, this means that $|f(x)| \leq M_0$ for all $x$. By definition of bounded, we see that $f(x)$ is bounded. Therefore $f(x) \in B$, and so $\cup F_M \subset B$.
+
+  Now suppose $f(x) \in B$. This means that $f(x)$ is bounded. By definition of bounded, \marginnote{Look, more definitions!} there exists some $L \in \R$ such that $|f(x)| \leq L$ for all $x$. Let $M_0$ be any integer larger than $L$---for example, $M_0 = \lfloor L + 1\rfloor$.\sidenote{The function $\lfloor x \rfloor$ is the \emph{greatest integer function}, which means essentially write the number as a decimal and then drop everything after the decimal point.} Then we see see that $|f(x)| \leq M_0$ as well. Therefore $f(x) \in F_{M_0}$ by definition of $F_{M_0}$, and we obtain $f(x) \in \cup_{M \in \N} F_M$ by definition of union. We conclude that $B \subset \cup_{M \in \N} F_M$.
+
+  Since $\cup_{M \in \N} F_M \subset B$ and $B \subset \cup_{M \in \N} F_M$, we see that $B = \cup F_M$.
+\end{proof}
 
 
 \bibliographystyle{halpha}
