@@ -972,7 +972,7 @@ F_M = \{f(x) \mid f \text{ is a real-valued function and } |f(x)| \leq M \text{ 
 \]
 For example, $3\sin x \in F_3$, but $3\sin x \notin F_2$. Let $B = $ the set of all bounded functions. In other words,
 \[
-B = \{f(x) \mid f \text{ is a real valued function and } \exists L \in \R \text{ such that } |f(x)| \leq L \, \, \forall x\}.
+B = \{f(x) \mid f \text{ is a real-valued function and } \exists L \in \R \text{ such that } |f(x)| \leq L \, \, \forall x\}.
 \]
 
 \begin{claim}
@@ -990,7 +990,12 @@ The idea of the proof is that in order for a function to be bounded, it is in fa
   Since $\cup_{M \in \N} F_M \subset B$ and $B \subset \cup_{M \in \N} F_M$, we see that $B = \cup F_M$.
 \end{proof}
 
-\hw{hw-indexed-sets}
+So what just happened? We found a way to write the set of bounded functions as a union of a bunch of other sets---in fact, of infinitely many sets. We refer to each of these sets with a positive integer. In other words, our indices are exactly the elements of $\N$. The way this is usually phrased is, $\N$ is the \emph{index set} for the $F_M$. The terminology tells us something else: the indices don't have to be integers at all.
+\begin{example}
+  Let $I = \{\text{supervillains}\}$. For $i \in I$, let $A_i = \{j\text{'s favorite food}\}$. Then, for example, $A_{\text{Magneto}} = \{\text{}\}$, and $A_{\text{Joker}} = \{\text{Batman's warm still-beating heart}\}$.
+\end{example}
+
+\input{hw-indexed-sets}
 
 
 \bibliographystyle{halpha}
