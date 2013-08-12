@@ -818,8 +818,7 @@ Lastly, if the sets in a Cartesian product are all the same, then we often use e
 For example, if $A = \{1, 2, 3\}$ and $B = \{3, 4, 5\}$, then $A \cup B = \{1, 2, 3, 4, 5\}$. Just as with Cartesian product, we can take the union of multiple sets: $A \cup B \cup C$ for example. 
 
 \begin{example}
-  Let 
-
+  Let \marginnote{For $B$, one should technically say that $x \in [-1,1]$, but since the universe is $\R^2$, this isn't strictly necessary.}
 \begin{align*}
 A &= \bigg\{(x, 1) \mid x^2 - \frac14 = 0\bigg\},\\
 B &= \{(x, y) \mid y = -\sqrt{1-x^2}\}, \text{ and}\\
@@ -860,6 +859,40 @@ Here's a slightly harder one:
 \begin{proof}
   Suppose that $a \in A$. Since $A \subset B$, by definition of subset we see that $a \in B$ as well. By the previous proposition, we conclude that $a \in B \cup C$. Since this reasoning holds for every $a \in A$, by definition of subset $A \subset B \cup C$.
 \end{proof}
+
+\begin{definition}
+  Suppose $A$ and $B$ are sets. The \emph{intersection} of $A$ and $B$, written $A \cap B$, is
+  \[
+  \{x \mid x \in A \text{ and } x \in B\}.
+  \]
+\end{definition}
+Notice that intersection is like union, but with OR replaced with AND. Intuitively, the intersection of two sets are all the elements held in common. For example, if $A = \{1, 2, 3, 4\}$ and $B = \{2, 4, 6, 8\}$, then $A \cap B = \{2, 4\}$. If $C = A \times B$, then $A \cap C = \emptyset$.\sidenote{The set $C$ consists of ordered pairs of integers, while $A$ consists of integers, so there is nothing in common.} Just as with Cartesian product and union, one can take the intersection of multiple sets.
+
+\begin{example}
+  Let
+  \begin{align*}
+    A &= \bigg\{(x, 1) \mid x^2 - \frac14 = 0\bigg\},\\
+    B &= \{(x,y) \mid y \geq -\sqrt{1-x^2}\}, \text{ and}\\
+    C &= \bigg\{(x,y) \mid y \leq -\frac12\sqrt{1-x^2}\bigg\}.
+  \end{align*}
+  Then $A \cup (B \cap C)$ is given by
+    \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[ axis x line=middle, axis y line=middle,
+        xmax=2, xmin=-2,
+        ymax=2, ymin=-2,
+        area style]
+        \addplot[thick, color=blue, smooth, domain=-pi:0,fill,blue] ({cos(deg(\x))},{sin(deg(\x))}) \closedcycle;
+        \addplot[thick, color=blue, smooth, domain=-pi:0,fill,white] ({cos(deg(\x))},{0.5*sin(deg(\x))}) \closedcycle;
+        \addplot[only marks, mark=*, blue] coordinates {
+          (0.5, 1)
+          (-0.5, 1)
+        };
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+
+\end{example}
 
 \input{hw-union-intersection}
 
