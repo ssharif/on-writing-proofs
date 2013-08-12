@@ -944,12 +944,16 @@ to mean
 If there is any doubt about what the universe is, then the second form should be used. Note that if $A$ is a set with universe $U$, then automatically $A \subset U$.
 
 \begin{definition}
-  Let $A$ be a set with universe $U$. Then the \emph{complement} of $A$ is $U - A$. It is written $A^c$.
+  Let $A$ be a set with universe $U$. Then the \emph{complement} of $A$ is $U - A$. It is written $A^c$, which is read ``$A$ complement''.
 \end{definition}
 
 If $E$ is the set of even integers, then we usually take $U = \Z$, from which $E^c$ is the set of odd integers. What if $A = \{0\}$? What is $A^c$? In this case, it's not at all obvious what the universe is. If the universe is $\Z$, then $A$ is the set of nonzero integers. But what if the universe is $\R$, or $\C$?
 
-Now suppose that $U = \{\text{Judgments you can make about your neighbor's clothes.}\}$. Let $A \subset U$ consist of the set of insults. Then the complement of $A$ is the set of compliments!
+Now suppose that 
+\[
+U = \{\text{Judgments you can make about your neighbor's clothes}\}.
+\]
+Let $A \subset U$ consist of the set of insults. Then the complement of $A$ is the set of compliments!\sidenote{I suppose there are also neutral comments, but this just ruins the joke.}
 
 \begin{proposition}\label{prop:complements}
   Let $A$ be a set with universe $U$. Then
@@ -1001,7 +1005,7 @@ If $S \neq \emptyset$, then $\sP(S)$ always contains the two elements $\emptyset
 
 Suppose we have a bunch of different sets we want to study. If there are three, we could name them $A$, $B$, and $C$ (for example). What if there are 10? One could conceivably call them $A$, $B$, $C$, \dots, up until the 10th letter of the alphabet. But of course it's easier to name them, for example, $A_1$, $A_2$, \dots, $A_{10}$. The subscripts are often called \emph{indices}, or in the singular an \emph{index}. In this case, the indices are $n \in \N, 1 \leq n \leq 10$, or more simply $n = 1, 2, \dots, 10$.
 
-But this is mathematics! Why stop at $10$? Let's take the following example. A real-valued function $f(x)$ is said to be \emph{bounded} if there exists some real number $L$ such that $|f(x)|$ never exceeds $L$. Any constant function is bounded, as are $\sin x$, $\cos x$, and $e^{-x^2}$.
+But this is mathematics! Why stop at $10$? Let's take the following example. A real-valued function $f(x)$ is said to be \emph{bounded} if there exists some real number $L$ such that $|f(x)|$ never exceeds $L$. Any constant function is bounded, as are $\sin x$, $\cos x$, and $e^{-x^2}$. The function $f(x) = x$ is \emph{not} bounded, as $\lim_{x \to \infty} f = \infty$.
 
 Given $M \in \N$, let 
 \[
@@ -1013,7 +1017,7 @@ B = \{f(x) \mid f \text{ is a real-valued function and } \exists L \in \R \text{
 \]
 
 \begin{claim}
-  With $B$ and $F_M$ as above, $B = \cup_{M \in \N} F_M$.
+  With $B$ and $F_M$ as above, $B = \displaystyle\bigcup_{M \in \N} F_M$. \marginnote{The union notation is the same as $F_1 \cup F_2 \cup \cdots$.}
 \end{claim}
 Notice that we're taking the union of infinitely many sets! The definition is the same as for two sets: $f \in \cup F_M$ means $f$ is in one of the $F_M$s, and vice versa.
 
