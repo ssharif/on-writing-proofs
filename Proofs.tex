@@ -69,7 +69,7 @@ The next few sections contain problems of this sort; that is, a number of inhabi
 
 Since there are two people in the problem, there are $2 \cdot 2 = 4$ potential solutions: \marginnote{Trying out every single option is known as the \emph{brute force} approach, and as you can see from this last example, one should only use it as a last resort. Instead, make key observations to shorten your work.}  Avery is a \knight and Belvedere is a \knight, Avery is a \knight and Belvedere is a \knave, Avery is a \knave and Belvedere is a \knight, or Avery is a \knave and Belvedere is a \knave. But clearly testing all 4 possibilities is a very slow way of solving the problem! 
 
-Now let's do Example~\ref{ex:knight-knave-1}.
+Now let's do \Cref{ex:knight-knave-1}.
 \begin{claim}
   Bartholomew is a \knave and Cynthia is a \knight. Azog's type cannot be determined.
 \end{claim}
@@ -251,7 +251,7 @@ Now we are ready to do the \knights and \knaves puzzle at the start of this sect
 
 So far we've taken two statements, P and Q, and combined them in three different ways: P or Q, P and Q, and if P then Q. To summarize our discussion, we can use \emph{truth tables}. 
 
-Table~\ref{tab:truth-table-or} lists the four possible combinations of truth values for P and Q: both are true (T T), P is true and Q is false (T F), P is false and Q is true (F T), or both are false (F F). In each case, one can look at the third column to determine if the statement ``P or Q'' is true or false.
+\Cref{tab:truth-table-or} lists the four possible combinations of truth values for P and Q: both are true (T T), P is true and Q is false (T F), P is false and Q is true (F T), or both are false (F F). In each case, one can look at the third column to determine if the statement ``P or Q'' is true or false.
 \begin{table}
   \centering
   \begin{tabular}{ccc}
@@ -301,7 +301,7 @@ One can similarly check the truth tables for AND and conditionals.
   \caption{Truth table for conditionals.}
   \label{tab:truth-table-conditionals}
 \end{table}
-Truth tables can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true? We can see the answer in Table~\ref{tab:truth-table-if-p-or-q-then-r}.
+Truth tables can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true? We can see the answer in \Cref{tab:truth-table-if-p-or-q-then-r}.
 
 \begin{table}
   \centering
@@ -321,7 +321,7 @@ Truth tables can be used for much more complicated situations. For example, say 
   \caption{Truth table for ``If P or Q, then R''.}
   \label{tab:truth-table-if-p-or-q-then-r}
 \end{table}
-Notice that in this case, there are $2 \cdot 2 \cdot 2 = 8$ possibilities.\sidenote{There are 2 possibilities for each of P, Q, and R.} Also, we put in a column for ``P or Q'' to help fill in the last column. The first 3 columns come from Table~\ref{tab:truth-table-or}, while the last 3 columns come from Table~\ref{tab:truth-table-conditionals}.
+Notice that in this case, there are $2 \cdot 2 \cdot 2 = 8$ possibilities.\sidenote{There are 2 possibilities for each of P, Q, and R.} Also, we put in a column for ``P or Q'' to help fill in the last column. The first 3 columns come from \Cref{tab:truth-table-or}, while the last 3 columns come from \Cref{tab:truth-table-conditionals}.
 
 \input{hw-truth-tables}
 
@@ -483,7 +483,7 @@ is the same as saying
 \begin{quote}
   If $n$ is an even prime then $n$ equals 2; and if $n$ equals 2 then $n$ is an even prime.
 \end{quote}
-In other words, a biconditional is the same as a conditional and its converse taken together. Table~\ref{tab:truth-table-iff} gives the truth table for ``P if and only if Q''.
+In other words, a biconditional is the same as a conditional and its converse taken together. \Cref{tab:truth-table-iff} gives the truth table for ``P if and only if Q''.
 
 \begin{table}
   \centering
