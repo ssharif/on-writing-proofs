@@ -249,7 +249,7 @@ Now we are ready to do the \knights and \knaves puzzle at the start of this sect
 \section{Truth tables}\marginnote{Truth tables are used for clarity when explaining propositional logic, but never appear in properly-written mathematical proofs. Thus if you get confused about what a theorem or problems says, for example, then it's a good idea to write out a truth table for yourself on scratch paper.}
 \label{sec:truth-tables}
 
-So far we've taken to statements, P and Q, and combined them in three different ways: P or Q, P and Q, and if P then Q. To summarize our discussion, we can use \emph{truth tables}. 
+So far we've taken two statements, P and Q, and combined them in three different ways: P or Q, P and Q, and if P then Q. To summarize our discussion, we can use \emph{truth tables}. 
 
 Table~\ref{tab:truth-table-or} lists the four possible combinations of truth values for P and Q: both are true (T T), P is true and Q is false (T F), P is false and Q is true (F T), or both are false (F F). In each case, one can look at the third column to determine if the statement ``P or Q'' is true or false.
 \begin{table}
@@ -393,7 +393,7 @@ These two examples are a special case of a general law:
       F & F & T & T & F & T & T\\
       \bottomrule
     \end{tabular}
-    \caption{DeMorgan's Law, part (a)}
+    \caption{DeMorgan's Law, part (a).}
     \label{tab:demorgan-a}
   \end{table}\marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}  
 \end{proof}
@@ -990,6 +990,16 @@ If $S \neq \emptyset$, then $\sP(S)$ always contains the two elements $\emptyset
   \end{array}
   \]
 \end{itemize}
+It can be useful to relate the subsets to each other graphically. Take the example of $S = \{a, b, c\}$. \marginnote[.5in]{The astute reader will notice that the diagram looks like a perspective drawing of a cube. This is not a coincidence! Compare, for example, opposite faces of the cube. What do you observe?}
+\[
+\xymatrix{
+  & \{a, b, c\} \ar@{-}[dl] \ar@{-}[d] \ar@{-}[dr] & \\
+  \{a, b\} \ar@{-}[d] \ar@{-}[dr] & \{a, c\} \ar@{-}[dl] \ar@{-}[dr] & \{b, c\} \ar@{-}[dl] \ar@{-}[d]\\
+  \{a\} \ar@{-}[dr] & \{b\} \ar@{-}[d] & \{c\} \ar@{-}[dl] \\
+  & \emptyset &
+}
+\]
+In the diagram, if two sets are connected by a line, then the lower set is a subset of the upper set.
 
 \begin{proposition}
   Suppose $S$ is a finite set. Then $\# \sP(S) = 2^{\# S}$.
@@ -1037,6 +1047,27 @@ In general, the indices don't even have to be integers.
 \begin{example}
   Let $C = \{\text{people in this class}\}$. For $c \in C$, let $L_c$ be the set of letters in $c$'s full name. Then $\displaystyle\bigcap_{c \in C} L_c$ is the set of letters which every person's name contains. This set is \emph{probably} empty---well, that's my wild guess. In this case, the index set is $C$.
 \end{example}
+
+For clarity, let us rigorously define the intersection and union of an arbitrary collection\sidenote{As opposed to just two.} of sets.
+\begin{definition}
+  Let $\Lambda$ be an index set, and for each $\lambda \in \Lambda$ let $A_\lambda$ be a set. Then
+  \[
+  \bigcup_{\lambda \in \Lambda} A_\lambda
+  \]
+  is the set consisting of all $x$ such that $x$ is contained in at least one of the $A_\lambda$. Also,
+  \[
+  \bigcap_{\lambda \in \Lambda} A_\lambda
+  \]
+  is the set consisting of all $x$ such that $x$ is contained in every $A_\lambda$.
+\end{definition}
+Here is an example. Let $\Lambda = \R$, and define $A_\lambda$ to be the set $\{\lambda\}$; that is, a single element set. So $A_0 = \{0\}$, $A_\pi = \{\pi\}$, and so forth. Then
+\[
+\bigcup_{\lambda \in \R} A_\lambda = \R
+\]
+and
+\[
+\bigcup_{\lambda \in \Q} A_\lambda = \Q.
+\]
 
 \input{hw-indexed-sets}
 
