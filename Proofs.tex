@@ -188,21 +188,13 @@ Dealing with conditionals is considerable trickier than dealing with conjunction
   Whose identification do you check?\sidenote{You could of course just check everyone's ID, but generally you want to check the fewest number of people as possible.}
 \end{example}
 
-\begin{example}
-  Your friend has 4 cards, each of which has a letter on one side and an integer on the other. Your friend then makes the statement, ``If the letter is a vowel, then the number on the other side is even.'' You want to check to see whether the statement is true or false. Suppose the 4 cards are lying on a table, and the sides visible to you read
-  \[
-  \framebox{A} \qquad \framebox{N} \qquad \framebox{4} \qquad \framebox{7}.
-  \]
-  Which cards do you turn over? \marginnote{Similar to the bouncer problem, you want to turn over the minimum number of cards.}
-\end{example}
-
-Try these both now. The words printed below will wait patiently while you solve these problems.
+Try this now. The words printed below will wait patiently.
 
 \begin{center}
 {\Large\Clocklogo}
 \end{center}
 
-Okay, ready? The first question is easy: just check the third person's ID. Here, you are checking that the rule
+Okay, ready? This should be easy: just check the third person's ID. Here, you are checking that the rule
 \begin{quote}
   If you are under 21, then your drink must be nonalcoholic.
 \end{quote}
@@ -222,17 +214,17 @@ Of these, the first three are true, and the last is false.
   Given the statement, ``If it is raining, then the grass is wet'', what would have to be happening right now for the statement to be false? List all possibilities which make the statement false.
 \end{example}
 
-We still haven't talked about the card problem. \marginnote{You should have tried to solve it before you got to this point. If you didn't, you're a lazy bum.}
+% We still haven't talked about the card problem. \marginnote{You should have tried to solve it before you got to this point. If you didn't, you're a lazy bum.}
 
-\begin{claim}
-  You would turn over the cards labeled A and 7.
-\end{claim}
+% \begin{claim}
+%   You would turn over the cards labeled A and 7.
+% \end{claim}
 
-\begin{proof}
-  As stated earlier, ``If P then Q'' is true \emph{unless} P is true and Q is false. In this case, P is ``the letter is a vowel'' and Q is ``the number on the other side is even''. For the card labeled N, P is false, so the conditional is automatically satisfied\sidenote{We say a statement or condition is \emph{satisfied} if it is true in that particular case. The statement is true if it is satisfied in all cases.}, and we don't need to turn the card over. For the card labeled 4, Q is true, so again the conditional is also automatically satisfied; we need not turn this card over.
+% \begin{proof}
+%   As stated earlier, ``If P then Q'' is true \emph{unless} P is true and Q is false. In this case, P is ``the letter is a vowel'' and Q is ``the number on the other side is even''. For the card labeled N, P is false, so the conditional is automatically satisfied\sidenote{We say a statement or condition is \emph{satisfied} if it is true in that particular case. The statement is true if it is satisfied in all cases.}, and we don't need to turn the card over. For the card labeled 4, Q is true, so again the conditional is also automatically satisfied; we need not turn this card over.
 
-  For the card labeled A, if the opposite side has an odd number, then the conditional is false; if the opposite side has an even number, then the conditional is true. Thus we need to check the A. The last case is 7. If the opposite side is a consonant, then there is no problem---the conditional is satisfied.\marginnote{If this seems strange, consider the case where opposite the 7 is an E, and opposite the 4 is a C. What does each card tell you about the truth of the conditional?} But if the opposite side is a vowel, then the conditional is false.
-\end{proof}
+%   For the card labeled A, if the opposite side has an odd number, then the conditional is false; if the opposite side has an even number, then the conditional is true. Thus we need to check the A. The last case is 7. If the opposite side is a consonant, then there is no problem---the conditional is satisfied.\marginnote{If this seems strange, consider the case where opposite the 7 is an E, and opposite the 4 is a C. What does each card tell you about the truth of the conditional?} But if the opposite side is a vowel, then the conditional is false.
+% \end{proof}
 
 Now we are ready to do the \knights and \knaves puzzle at the start of this section! We restate it here to refresh your memory:
   \begin{dialogue}
