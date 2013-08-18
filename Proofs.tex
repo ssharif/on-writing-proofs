@@ -259,15 +259,16 @@ So far we've taken two statements, P and Q, and combined them in three different
 
 \Cref{tab:truth-table-or} lists the four possible combinations of truth values for P and Q: both are true (T T), P is true and Q is false (T F), P is false and Q is true (F T), or both are false (F F). In each case, one can look at the third column to determine if the statement ``P or Q'' is true or false.
 \begin{table}
-  \centering
-  \begin{tabular}{ccc}
-    \toprule
-    P & Q & P or Q \\ \midrule
-    T & T & T \\
-    T & F & T \\
-    F & T & T \\
-    F & F & F \\ \bottomrule
-  \end{tabular}
+  \begin{center}
+    \begin{tabular}{ccc}
+      \toprule
+      P & Q & P or Q \\ \midrule
+      T & T & T \\
+      T & F & T \\
+      F & T & T \\
+      F & F & F \\ \bottomrule
+    \end{tabular}
+  \end{center}
   \caption{Truth table for OR.}
   \label{tab:truth-table-or}
 \end{table}
@@ -295,35 +296,37 @@ One can similarly check the truth tables for AND and conditionals.
 \end{table}
 
 \begin{table}
-  \centering
-  \begin{tabular}{ccc}
-    \toprule
-    P & Q & If P then Q \\ \midrule
-    T & T & T \\
-    T & F & F \\
-    F & T & T \\
-    F & F & T \\ \bottomrule
-  \end{tabular}
+  \begin{center}
+    \begin{tabular}{ccc}
+      \toprule
+      P & Q & If P then Q \\ \midrule
+      T & T & T \\
+      T & F & F \\
+      F & T & T \\
+      F & F & T \\ \bottomrule
+    \end{tabular}
+  \end{center}
   \caption{Truth table for conditionals.}
   \label{tab:truth-table-conditionals}
 \end{table}
 Truth tables can be used for much more complicated situations. For example, say we are looking at statements of the form ``If P or Q, then R.''\sidenote{Like: ``If $n$ is prime or negative, then $n$ is not a perfect square.''} Under what conditions on P, Q, R is this statement true? We can see the answer in \Cref{tab:truth-table-if-p-or-q-then-r}.
 
 \begin{table}
-  \centering
-  \begin{tabular}{ccccc}
-    \toprule
-    P & Q & P or Q & R & If P or Q, then R \\ \midrule
-    T & T & T & T & T\\
-    T & T & T & F & F\\
-    T & F & T & T & T\\
-    T & F & T & F & F\\ 
-    F & T & T & T & T \\
-    F & T & T & F & F \\
-    F & F & F & T & T \\
-    F & F & F & F & T \\
-    \bottomrule
-  \end{tabular}
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \toprule
+      P & Q & P or Q & R & If P or Q, then R \\ \midrule
+      T & T & T & T & T\\
+      T & T & T & F & F\\
+      T & F & T & T & T\\
+      T & F & T & F & F\\ 
+      F & T & T & T & T \\
+      F & T & T & F & F \\
+      F & F & F & T & T \\
+      F & F & F & F & T \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
   \caption{Truth table for ``If P or Q, then R''.}
   \label{tab:truth-table-if-p-or-q-then-r}
 \end{table}
@@ -389,19 +392,20 @@ These two examples are a special case of a general law:
 \begin{proof}[Alternate proof of part (a)]
   We construct a truth table, \Cref{tab:demorgan-a}, to compare ``Not P and not Q'' with ``Not `P or Q'~'', and see that they have the same truth values in all cases. The claim follows.
   \begin{table}
-    \centering
-    \begin{tabular}{ccccccc}
-      \toprule
-      P & Q & $\neg$ P & $\neg$ Q & P or Q & $\neg$ P and $\neg$ Q & Not (P or Q) \\ \midrule 
-      T & T & F & F & T & F & F\\
-      T & F & F & T & T & F & F\\
-      F & T & T & F & T & F & F\\
-      F & F & T & T & F & T & T\\
-      \bottomrule
-    \end{tabular}
+    \begin{center}
+      \begin{tabular}{ccccccc}
+        \toprule
+        P & Q & $\neg$ P & $\neg$ Q & P or Q & $\neg$ P and $\neg$ Q & Not (P or Q) \\ \midrule 
+        T & T & F & F & T & F & F\\
+        T & F & F & T & T & F & F\\
+        F & T & T & F & T & F & F\\
+        F & F & T & T & F & T & T\\
+        \bottomrule
+      \end{tabular}
+    \end{center}
     \caption{DeMorgan's Law, part (a).}
     \label{tab:demorgan-a}
-  \end{table}\marginnote{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}  
+  \end{table}\marginnote[-.7in]{This kind of proof is fine for propositional logic, but the paragraph-style is preferred since ``proof by table'' isn't an option in the rest of this text.}  
 \end{proof}
 
 % There are two more equivalences which come up quite frequently, both involving conditionals.
@@ -480,15 +484,16 @@ is the same as saying
 In other words, a biconditional is the same as a conditional and its converse taken together. \Cref{tab:truth-table-iff} gives the truth table for ``P if and only if Q''.
 
 \begin{table}
-  \centering
-  \begin{tabular}{ccccc}
-    \toprule
-    P & Q & If P then Q & If Q then P & P if and only if Q \\ \midrule
-    T & T & T & T & T\\
-    T & F & F & T & F\\
-    F & T & T & F & F\\
-    F & F & T & T & T\\ \bottomrule
-  \end{tabular}
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \toprule
+      P & Q & If P then Q & If Q then P & P if and only if Q \\ \midrule
+      T & T & T & T & T\\
+      T & F & F & T & F\\
+      F & T & T & F & F\\
+      F & F & T & T & T\\ \bottomrule
+    \end{tabular}
+  \end{center}
   \caption{Truth table for biconditionals.}
   \label{tab:truth-table-iff}
 \end{table}
