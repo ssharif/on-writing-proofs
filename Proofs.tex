@@ -786,7 +786,22 @@ One way of thinking of subsets is one takes some of the elements of $B$, but not
 
 Given a set $B$, the empty set $\emptyset$ is \emph{always} a subset of $B$. Also, $B$ itself is a subset of $B$.\sidenote{Some texts use $A \subseteq B$ to mean $A$ is a subset of $B$, and reserve $A \subset B$ to mean that $A$ is a subset of $B$, but is not allowed to be $B$ itself. That is, $A$ must be strictly smaller than $B$.} Thus, most sets have at least two subsets.
 
-As examples, take ???
+\begin{example}
+  Let $A = \{1, (2,3), \{4, 5\}\}$. We have the following:
+  \begin{itemize}
+      \item $1 \in A$
+      \item $1 \not\subset A$ \marginnote{As you might guess, $\not\subset$ means ``is not a subset of''.}
+      \item $\{1\} \subset A$
+      \item $2 \notin A$
+      \item $\{2\} \not\subset A$
+      \item $\{(2,3)\}\subset A$
+      \item $\{4\} \not\subset A$
+      \item $\{4, 5\} \in A$
+      \item $\{\{4, 5\}\} \subset A$
+      \item $\{1, \{4, 5\}\} \subset A$
+  \end{itemize}
+
+\end{example}
 
 Frequently you will need to show that one set is a subset of another. How do you do this? In this course\sidenote{And in mathematics more generally.}, the answer to that kind of question is \emph{almost always} contained in the definitions of the two sets. We will do an example in the next section.
 
