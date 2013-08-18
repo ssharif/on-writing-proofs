@@ -506,8 +506,8 @@ Notice that ``P if and only if Q'' is true precisely when both P and Q have the 
 
 \input{hw-biconditionals}
 
-\section{Open statements}
-\label{sec:open-statements}
+\section{For all and there exists}
+\label{sec:quantifiers}
 
 Consider the statement
 \begin{quote}
@@ -571,9 +571,18 @@ The statement is true if there is \emph{at least one} $n$ for which the conditio
     \item $\exists$ a prime number $n$ such that $n$ is even. \marginnote{There is an equivalent phrasing using ``for some'': $n$ is even for some prime number $n$, or $n$ is a perfect square for some prime number $n$. Either way is fine.}
     \item $\exists$ a prime number $n$ such that $n$ is a perfect square.
 \end{itemize}
-The first one is true, since $n = 2$ works. Notice that $n = 3$ is a prime which is not even, but this does not affect the truth of the statement; we only need a single $n$ which works.
+The first one is true, since $n = 2$ works. Notice that $n = 3$ is a prime which is not even, but this does not affect the truth of the statement; we only need a single $n$ which works. The second statement is false, as no prime number can be a perfect square; that is, we cannot find even a single prime $n$ for which the condition holds.
 
-The second statement is false, as no prime number can be a perfect square; that is, we cannot find even a single prime $n$ for which the condition holds.
+When writing a proof, if the condition after ``such that'' is sufficiently difficult, then you need to provide a reason for the existence. For example,
+\begin{quote}
+  $\exists n$ such that $n$ is prime and $n + 2$ is prime.\sidenote{Hm: I wonder how many $n$ there are with this property?}
+\end{quote}
+is not exactly obvious. In this case, one could simply add
+\begin{quote}
+  For example, take $n = 3$.
+\end{quote}
+
+
 
 
 \paragraph{Negating quantifiers.}
@@ -596,7 +605,23 @@ Notice that to make a universally quantified ($\forall$) statement false, we jus
 \end{itemize}
 \end{example}
 
-\input{hw-open-statements}
+\paragraph{Using ``let''}
+\label{sec:using-let}
+
+A common pitfall is misuse of the word ``let''. ``Let'' means that you are introducing the thing immediately following:
+\begin{quote}
+  Let $n$ be an integer.
+\end{quote}
+This construction most frequently comes up when assigning a variable name, as in the example above. If the object being named has special properties, one pairs the ``let'' with a ``such that'':
+\begin{quote}
+  Let $x$ be a real number such that $x > 0$. \marginnote{Of course, ``Let $x$ be a positive real number'' is better.}
+\end{quote}
+As in the case of existential operators, if it's not clear why you can find something with the given special property, you must provide a reason:
+\begin{quote}
+  Let $x$ be a real number such that $x > 0$. Let $y$ be a real number such that $y^2 = x$. Since $x > 0$, such a $y$ exists.
+\end{quote}
+
+\input{hw-quantifiers}
 
 \section{Logical deduction}
 \label{sec:logical-deduction}
