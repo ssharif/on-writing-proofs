@@ -60,6 +60,20 @@
       \item $(A \cap C) \cup B$.
   \end{enumerate}
 
+    \item Write the set given graphically below as a union and intersection of ``simple'' sets.
+    \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[ axis x line=middle, axis y line=middle,
+        xmax=2, xmin=-2,
+        ymax=3, ymin=-1,
+        area style]
+       \addplot[thick, domain=-1:1, color=blue, fill=blue] {3-3*abs(x)} ;
+        \addplot[thick, domain=-1:1, color=blue, fill=white] {1-abs(x)} ;
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+
+
     \item Suppose $A$ and $B$ are finite sets with $\# A = m$ and $\# B = n$.
   \begin{enumerate}
       \item What is $\# (A \times B)$?
