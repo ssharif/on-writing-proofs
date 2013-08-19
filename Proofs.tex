@@ -575,7 +575,7 @@ The first one is true, since $n = 2$ works. Notice that $n = 3$ is a prime which
 
 When writing a proof, if the condition after ``such that'' is sufficiently difficult, then you need to provide a reason for the existence. For example,
 \begin{quote}
-  $\exists n$ such that $n$ is prime and $n + 2$ is prime.\sidenote{Hm: I wonder how many $n$ there are with this property?}
+  $\exists n$ such that $n$ is prime and $n + 2$ is prime.\sidenote{Hmm: I wonder \href{http://en.wikipedia.org/wiki/Twin_prime}{how many} $n$ there are with this property?}
 \end{quote}
 is not exactly obvious. In this case, one could simply add
 \begin{quote}
@@ -650,7 +650,7 @@ These rules are generally pretty clear, so I omit any further discussion of them
 \section{What is a set?}
 \label{sec:what-set}
 
-A set is essentially\marginnote{Set theory is actually quite complicated, and in certain situations you have to be very careful about what is considered a set. However this is a fairly rare situation.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
+A set is essentially\marginnote{Set theory is actually \href{http://en.wikipedia.org/wiki/Russell's_paradox}{quite} \href{http://en.wikipedia.org/wiki/List_of_statements_undecidable_in_ZFC}{complicated}, and in certain situations you have to be very careful about what is considered a set. However this is a fairly rare situation.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
 
 \begin{definition}
   Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$. Two sets are the equal if they have exactly the same elements.
@@ -700,7 +700,7 @@ While you're mulling over these, try going the other way: write down the followi
     \item The set of all real numbers.\sidenote{We'll get back to this example near the end of this course.}
     \item The set of people currently on Earth.
     \item The set of people who have exactly one red-headed sibling.
-    \item The set of all even numbers which can be written as the sum of two primes.\sidenote{If you are familiar with Goldbach's conjecture, reward yourself with a coffee, ice cream, beer, raspberries, or rice.}
+    \item The set of all even numbers which can be written as the sum of two primes.\sidenote{If you are familiar with \href{http://en.wikipedia.org/wiki/Goldbach's_conjecture}{Goldbach's conjecture}, reward yourself with a coffee, ice cream, beer, raspberries, or rice.}
 \end{itemize}
 Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letters of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another issue: the elements are too hard to list in any meaningful way.
 
@@ -744,7 +744,7 @@ The vertical bar is read ``such that''.\marginnote{Some texts use a colon instea
 \end{enumerate}
 What are these sets?\sidenote{In other words, find a more succinct description of these sets.} The way to understand these sets is to take $x$ of the type to the left of the vertical bar and see if the condition on the right is true or not for $x$. If it is true, then $x$ is in the set. If it is false, then $x$ is not in the set. The first example is clear: it is the set of even numbers. We check $x = 2$; since $2$ is even, the condition holds, and $2$ is in the set. We check $x = 5$; since $5$ is not even, the condition does not hold, and $5$ is not in the set.
 
-Similarly, the second example is the set of positive real numbers. The third is the set $\{-1, 1\}$. The fourth is empty---there are no real numbers which satisfy the equation. The fifth uses the existential quantifier, and is in fact also the set of all even numbers.\marginnote{Later, we will show how to prove this. For now, it is enough to figure out what the answer is.} Take $x = 2$. The question is then does there exist an integer $n$ such that $2n = x$, or in other words $2n = 2$? The answer is yes ($n = 1$), so $2$ is in the set. Now try $x = 3$. Does there exist an integer $n$ such that $2n = 3$? The answer is no: only $n = \frac32$ works, but this is not an integer. Therefore $3$ is not in the set. The sixth example is the interval $[3,5)$.
+Similarly, the second example is the set of positive real numbers. The third is the set $\{-1, 1\}$. The fourth is empty---there are no real numbers which satisfy the equation. The fifth uses the existential quantifier, and is in fact also the set of all even numbers. Take $x = 2$. The question is then does there exist an integer $n$ such that $2n = x$, or in other words $2n = 2$? The answer is yes ($n = 1$), so $2$ is in the set. Now try $x = 3$. Does there exist an integer $n$ such that $2n = 3$? The answer is no: only $n = \frac32$ works, but this is not an integer. Therefore $3$ is not in the set. The sixth example is the interval $[3,5)$.
 
 The last example is the empty set! Take $x = 1$. Is it true that for every real number $y$, that $x > y$? Of course not---just take $y = 2$! Now try $x = 100$. Is it true that for every real number $y$, that $x > y$? No---now take $y = 101$. The condition is saying that $x$ is bigger than every real number; but we know that there is no such number.\marginnote{For the general case, given any $x$, we can always choose $y = x + 1$, which forces $x < y$.} Therefore the set is empty.
 
