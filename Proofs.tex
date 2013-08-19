@@ -653,7 +653,7 @@ These rules are generally pretty clear, so I omit any further discussion of them
 A set is essentially\marginnote{Set theory is actually \href{http://en.wikipedia.org/wiki/Russell's_paradox}{quite} \href{http://en.wikipedia.org/wiki/List_of_statements_undecidable_in_ZFC}{complicated}, and in certain situations you have to be very careful about what is considered a set. However this is a fairly rare situation.} a collection of things. These things can be numbers, functions, people, symbols, geometric objects, or even other sets. 
 
 \begin{definition}
-  Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$. If $x$ is not an element of $S$, we write $x \notin S$. Two sets are the equal if they have exactly the same elements.
+  Let $S$ be a set. If $x$ is one of the objects in the set $S$, we say $x$ is an \emph{element} or \emph{member} of $S$, and write $x \in S$.\marginnote{It is important to understand the \emph{grammar} of the symbol $\in$: to the left is an object, like a number, and to the right is a set. The thing on the right of $\in$ \emph{must} be a set.} We also say $S$ \emph{contains} the element $x$, or $x$ \emph{lies in} $S$. If $x$ is not an element of $S$, we write $x \notin S$. Two sets are the equal if they have exactly the same elements.
 \end{definition}
 
 If $S$ is the set of all even integers, we have $2 \in S$, $4 \in S$, $5 \notin S$, and $\text{``hot dogs''} \notin S$.
@@ -780,17 +780,17 @@ The cardinality of $\{1, 2, 3\}$ is 3. If $S = \{2, 4, 6, \dots, 20\}$, then $\#
 \label{sec:subsets}
 
 \begin{definition}
-  Given two sets $A$ and $B$, we say that $A$ is a \emph{subset} \marginnote{Learn this definition. Memorize it if you have to. Otherwise you will be unable to do any problems requiring you to prove that one set is a subset of another. The same holds for \emph{every single definition} you see from here on out.} of $B$ if for every $a \in A$, we have $a \in B$. In this case, we write $A \subset B$. 
+  Given two sets $A$ and $B$, we say that $A$ is a \emph{subset} \marginnote{Learn this definition. Memorize it if you have to. Otherwise you will be unable to do any problems requiring you to prove that one set is a subset of another. The same holds for \emph{every single definition} you see from here on out.} of $B$ if for every $a \in A$, we have $a \in B$. In this case, we write $A \subset B$. \marginnote[.1in]{The grammar of $\subset$ is that the symbols on both sides must represent sets.}
 \end{definition}
 One way of thinking of subsets is one takes some of the elements of $B$, but not necessarily all, and uses only these elements to make $A$.
 
-Given a set $B$, the empty set $\emptyset$ is \emph{always} a subset of $B$. Also, $B$ itself is a subset of $B$.\sidenote{Some texts use $A \subseteq B$ to mean $A$ is a subset of $B$, and reserve $A \subset B$ to mean that $A$ is a subset of $B$, but is not allowed to be $B$ itself. That is, $A$ must be strictly smaller than $B$.} Thus, most sets have at least two subsets.
+Given a set $B$, the empty set $\emptyset$ is \emph{always} a subset of $B$. Also, $B$ itself is a subset of $B$.\sidenote[][.2in]{Some texts use $A \subseteq B$ to mean $A$ is a subset of $B$, and reserve $A \subset B$ to mean that $A$ is a subset of $B$, but is not allowed to be $B$ itself. That is, $A$ must be strictly smaller than $B$.} Thus, most sets have at least two subsets.
 
 \begin{example}
   Let $A = \{1, (2,3), \{4, 5\}\}$. We have the following:
   \begin{itemize}
       \item $1 \in A$
-      \item $1 \not\subset A$ \marginnote{As you might guess, $\not\subset$ means ``is not a subset of''.}
+      \item $1 \not\subset A$ \marginnote[.1in]{As you might guess, $\not\subset$ means ``is not a subset of''.}
       \item $\{1\} \subset A$
       \item $2 \notin A$
       \item $\{2\} \not\subset A$
@@ -807,7 +807,7 @@ Frequently you will need to show that one set is a subset of another. How do you
 
 We mentioned before that two sets are equal if they consist of exactly the same elements. In practice, we use the following proposition to prove set equality.
 \begin{proposition}
-  Let $A$ and $B$ be sets. If $A \subset B$ and $B \subset A$, then $A = B$. \marginnote{The converse is true too.}
+  Let $A$ and $B$ be sets. If $A \subset B$ and $B \subset A$, then $A = B$. \marginnote{You will be using this proposition \emph{a lot} in this chapter. Note that the converse of this proposition is also true.}
 \end{proposition}
 
 \begin{proof}
@@ -839,7 +839,7 @@ If there are more than two sets, say $n$ sets, we can define the Cartesian produ
 \[
 A \times B \times C = \{(a, b, c) \mid a \in A, b \in B, \text{ and } c \in C\}.
 \]
-Note that $A \times B \times C$, $A \times (B \times C)$, and $(A \times B) \times C$ are \emph{not} the same set! The first consists of ordered triples. The second consists of ordered pairs of the form $(a, (b, c))$---that is, the first entry in the ordered pair is an element of $A$, and the second entry is an element of $B \times C$.\sidenote{Now describe elements of the third product yourself.}
+Note that $A \times B \times C$, $A \times (B \times C)$, and $(A \times B) \times C$ are \emph{not} technically the same set! The first consists of ordered triples. The second consists of ordered pairs of the form $(a, (b, c))$---that is, the first entry in the ordered pair is an element of $A$, and the second entry is an element of $B \times C$.\sidenote{Now describe elements of the third product yourself.}
 
 Lastly, if the sets in a Cartesian product are all the same, then we often use exponential notation. For example, $A \times A$ would be written $A^2$, and $A \times A \times A$ would be written $A^3$.
 
@@ -1039,7 +1039,7 @@ If $S = \emptyset$, then $\sP(S) = \{\emptyset\}$. Note that $S \neq \sP(S)$---w
 If $S \neq \emptyset$, then $\sP(S)$ always contains the two elements $\emptyset$ and $S$ itself. Here are some simple examples:
 \begin{itemize}
     \item If $S = \{a\}$, then $\sP(S) = \{\emptyset, \{a\}\}$.
-    \item If $S = \{a, b\}$, then $\sP(S) = \{\emptyset, \{a\}, \{b\}, \{a, b\}\}$. Note that $a \notin \sP(S)$; rather, $\{a\} \in \sP(S)$.
+    \item If $S = \{a, b\}$, then $\sP(S) = \{\emptyset, \{a\}, \{b\}, \{a, b\}\}$. Note that $a \notin \sP(S)$ and $\{a\} \not\subset \sP(S)$; rather, $\{a\} \in \sP(S)$.
     \item If $S = \{a, b, c\}$, then $\sP(S)$ is
   \[
   \begin{array}{cccc}
