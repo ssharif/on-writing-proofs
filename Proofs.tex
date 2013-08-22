@@ -292,9 +292,9 @@ So far we've taken two statements, P and Q, and combined them in three different
 
 For example, suppose we want to determine if 
 \begin{quote}
-  The sky is green or $2 + 2 = 5$.
+  The sky is green or coffee is the best beverage in the universe.
 \end{quote}
-is true or not. We have P is ``the sky is green'' and Q is ``$2 + 2 = 5$''. Since P is false and Q is true, we're in the third row of the table. The last entry is T, so the statement is true.
+is true or not. We have P is ``the sky is green'' and Q is ``coffee is the best beverage in the universe''. Since P is false and Q is true, we're in the third row of the table. The last entry is T, so the statement is true.
 
 One can similarly check the truth tables for AND and conditionals.
 
@@ -622,7 +622,7 @@ Notice that to make a universally quantified ($\forall$) statement false, we jus
 \end{itemize}
 \end{example}
 
-\paragraph{Using ``let''}
+\paragraph{Using ``let''.}
 \label{sec:using-let}
 
 A common pitfall is misuse of the word ``let''. ``Let'' means that you are introducing the thing immediately following:
@@ -718,6 +718,7 @@ While you're mulling over these, try going the other way: write down the followi
     \item The set of people currently on Earth.
     \item The set of people who have exactly one red-headed sibling.
     \item The set of all even numbers which can be written as the sum of two primes.\sidenote{If you are familiar with \href{http://en.wikipedia.org/wiki/Goldbach's_conjecture}{Goldbach's conjecture}, reward yourself with a coffee, ice cream, beer, raspberries, or rice.}
+    \item The set of all example sets in this section, including this one.
 \end{itemize}
 Now let's do the sets from earlier. The first one is just the odd prime numbers, while the second is the first letters of all of the integers (\underline{o}ne, \underline{t}wo, \underline{f}our, \dots). This highlights a major defect of the list representation of a set: it might be hard to guess what the set really is! For the second set of problems, we have another issue: the elements are too hard to list in any meaningful way.
 
@@ -789,7 +790,7 @@ The second set is all integer multiples of $4$ (why?), and the last set is the i
   If a set $S$ consists of finitely many elements, then we say $S$ is a \emph{finite set}. Otherwise we say $S$ is an \emph{infinite set}. If $S$ is finite, the \emph{cardinality} of $S$ is the number of elements in $S$. If $S$ is infinite, we say that its cardinality is infinite. The cardinality of $S$ is denoted $\# S$.\marginnote{Many texts use the notation $|S|$ for cardinality. However, this is terrible notation since $|\cdot |$ is used for a multitude of different things.}
 \end{definition}
 
-The cardinality of $\{1, 2, 3\}$ is 3. If $S = \{2, 4, 6, \dots, 20\}$, then $\# S = 10$. If $S = \emptyset$, then $\# S = 0$. Note that cardinality is always a nonnegative integer. \marginnote{There are such things as infinite cardinalities; we will discuss some basic concepts in the theory later in this course.}
+The cardinality of $\{1, 2, 3\}$ is 3. If $S = \{2, 4, 6, \dots, 20\}$, then $\# S = 10$. If $S = \emptyset$, then $\# S = 0$. Note that the cardinality of a finite set is always a nonnegative integer. \marginnote{There are such things as infinite cardinalities; we will discuss some basic concepts in the theory later in this course.}
 
 \input{hw-sets}
 
@@ -1153,7 +1154,7 @@ and
 
 \addcontentsline{toc}{chapter}{\protect\numberline{}Interlude}
 
-\paragraph{Coming up with proofs}
+\paragraph{Coming up with proofs.}
 \label{sec:coming-up-with}
 
 In this course we concentrate on the actual writing of a proof. But obviously, you have to know what to write down first! Suppose you are given a statement P which you are asked to prove. In order to come up with a proof, you need to
@@ -1168,12 +1169,18 @@ There are two fundamental tools to solve these problems:
 \end{itemize}
 Ask \emph{any} mathematician, and they will tell you that they do these two things constantly! That means you should too!
 
-\paragraph{Writing rigorously}
+\paragraph{Writing rigorously.}
 \label{sec:writing-rigorously}
 
-In mathematics, we use the term \emph{rigor} to mean the practice of not skipping any steps, of covering every part and detail in an argument. To become a rigorous writer takes practice, both as a \emph{writer} and as a \emph{reader} of mathematics. But rigor is most important at the end of the problem-solving process. One way of thinking of this\sidenote{Thanks to G.~Harel for this idea.} is that when you solve a problem, you should prove it three times: once for yourself, once for your friend, and lastly for your enemy. The first time, you just want to get the idea of the proof with as little self-doubt as possible. The second time, imagine you are explaining the idea to a supportive friend. But finally, you must write down the proof so carefully that even your avowed nemesis is (reluctantly!) convinced.
+In mathematics, we use the term \emph{rigor} to mean the practice of not skipping any steps, of covering every part and detail in an argument. To become a rigorous writer takes practice, both as a \emph{writer} and as a \emph{reader} of mathematics. But rigor is most important at the end of the problem-solving process. One way of thinking of this is that when you solve a problem, you should prove it three times:\sidenote{Thanks to G.~Harel for this idea.}
+\begin{itemize}
+    \item once for yourself,
+    \item once for your friend,
+    \item lastly for your enemy.
+\end{itemize}
+The first time, you just want to get the idea of the proof with as little self-doubt as possible. The second time, imagine you are explaining the idea to a supportive friend. But finally, you must write down the proof so carefully that even your avowed nemesis is (reluctantly!) convinced.
 
-\paragraph{What you can assume}
+\paragraph{What you can assume.}
 \label{sec:what-you-can}
 
 One difficulty in introductory-level theoretical math classes is figuring out what you can assume, and what you must prove. % The reason is that as a practitioner of mathematics, it's not enough to know \emph{what} is true, but also \emph{why}.\sidenote{There are many practical benefits, particularly the ability to adapt standard algorithms to unfamiliar situations. Indeed, much of mathematical progress takes this form.}
